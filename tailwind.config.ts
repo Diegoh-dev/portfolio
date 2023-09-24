@@ -20,6 +20,10 @@ const config: Config = {
       'blue':'#0000FE',
       'purple':'#7045D4',
 
+    },
+    fontFamily:{
+      petrov:['var(--font-petrov)'],
+      exo:['var(--font-exo)']
     }
   },
   plugins: [],

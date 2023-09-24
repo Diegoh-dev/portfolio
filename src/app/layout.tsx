@@ -1,10 +1,65 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-
+import './globals.css';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 const inter = Inter({ subsets: ['latin'] });
 
-// const pretrov = 
+const Petrov = localFont({
+  src:[
+    {
+      path:'./fonts/PetrovSans-Trial-Bold.ttf',
+      weight:'700',
+      style:'normal',
+    },
+    {
+      path:'./fonts/PetrovSans-Trial-ExtraLight.ttf',
+      weight:'500',
+      style:'normal'
+    },
+    {
+      path:'./fonts/PetrovSans-Trial-Light.ttf',
+      weight:'400',
+      style:'normal'
+    },
+    {
+      path:'./fonts/PetrovSans-Trial-Regular.ttf',
+      weight:'400',
+      style:'normal'
+    },
+  ],
+  variable:'--font-petrov'
+});
+
+const Exo = localFont({
+  src:[
+    {
+      path:'./fonts/Exo2-Bold.otf',
+      weight:'700',
+      style:'normal',
+    },
+    {
+      path:'./fonts/Exo2-Light.otf',
+      weight:'400',
+      style:'normal'
+    },
+    {
+      path:'./fonts/Exo2-Medium.otf',
+      weight:'600',
+      style:'normal'
+    },
+    {
+      path:'./fonts/Exo2-Regular.otf',
+      weight:'400',
+      style:'normal'
+    },
+    {
+      path:'./fonts/Exo2-SemiBold.otf',
+      weight:'600',
+      style:'normal'
+    },
+  ],
+  variable:'--font-exo'
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
