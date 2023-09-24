@@ -1,4 +1,3 @@
-import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
@@ -7,53 +6,53 @@ const inter = Inter({ subsets: ['latin'] });
 const Petrov = localFont({
   src:[
     {
-      path:'./fonts/PetrovSans-Trial-Bold.ttf',
+      path:'../../public/fonts/PetrovSans-Trial-Bold.ttf',
       weight:'700',
       style:'normal',
     },
     {
-      path:'./fonts/PetrovSans-Trial-ExtraLight.ttf',
+      path:'../../public/fonts/PetrovSans-Trial-ExtraLight.ttf',
       weight:'500',
       style:'normal'
     },
     {
-      path:'./fonts/PetrovSans-Trial-Light.ttf',
+      path:'../../public/fonts/PetrovSans-Trial-Light.ttf',
       weight:'400',
       style:'normal'
     },
     {
-      path:'./fonts/PetrovSans-Trial-Regular.ttf',
+      path:'../../public/fonts/PetrovSans-Trial-Regular.ttf',
       weight:'400',
       style:'normal'
     },
   ],
   variable:'--font-petrov'
 });
-
+// ./fonts/Exo2-Bold.otf
 const Exo = localFont({
   src:[
     {
-      path:'./fonts/Exo2-Bold.otf',
+      path:'../../public/fonts/Exo2-Bold.otf',
       weight:'700',
       style:'normal',
     },
     {
-      path:'./fonts/Exo2-Light.otf',
+      path:'../../public/fonts/Exo2-Light.otf',
       weight:'400',
       style:'normal'
     },
     {
-      path:'./fonts/Exo2-Medium.otf',
+      path:'../../public/fonts/Exo2-Medium.otf',
       weight:'600',
       style:'normal'
     },
     {
-      path:'./fonts/Exo2-Regular.otf',
+      path:'../../public/fonts/Exo2-Regular.otf',
       weight:'400',
       style:'normal'
     },
     {
-      path:'./fonts/Exo2-SemiBold.otf',
+      path:'../../public/fonts/Exo2-SemiBold.otf',
       weight:'600',
       style:'normal'
     },
