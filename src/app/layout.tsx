@@ -1,3 +1,4 @@
+import { Providers } from '@/components/atoms/providers';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 
@@ -70,8 +71,12 @@ export default function RootLayout({
 }) {
   // className={inter.className}
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <Providers>
+        {children}
+        </Providers>
+        </body>
     </html>
   )
 }
