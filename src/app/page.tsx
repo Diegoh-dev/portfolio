@@ -33,10 +33,8 @@ export default function Home() {
       </section>
 
     {/* foto de perfil */}
-      <article className="bg-light w-16 h-16 rounded-full ml-8 my-[-32px] absolute">
-       <div>
+      <article className="absolute ml-8 my-[-32px]">
        <IconUser/>
-       </div>
       </article>
 
 
