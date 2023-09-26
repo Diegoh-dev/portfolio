@@ -2,7 +2,7 @@ import { Providers } from '@/components/atoms/providers';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 
-const Petrov = localFont({
+const petrov = localFont({
   src:[
     {
       path:'../../public/fonts/PetrovSans-Trial-Bold.ttf',
@@ -28,7 +28,7 @@ const Petrov = localFont({
   variable:'--font-petrov'
 });
 
-const Exo = localFont({
+const exo = localFont({
   src:[
     {
       path:'../../public/fonts/Exo2-Bold.otf',
@@ -69,9 +69,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  // className={inter.className}
+  
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="pt-br" suppressHydrationWarning className={`${petrov.variable} ${exo.variable}`}>
       <body>
         <Providers>
         {children}
