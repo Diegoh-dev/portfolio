@@ -35,6 +35,7 @@ export default function Home() {
 
       {/* foto de perfil */}
       <article className="absolute ml-8 my-[-32px]">
+        {/* passar as propriedades de cores */}
         <IconUser />
       </article>
 
