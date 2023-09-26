@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --color-dark: #070707;
+    --color-light: #FFF;
+    --color-blue: #0000FE;
+    --color-purple:#7045D4;
+  }
