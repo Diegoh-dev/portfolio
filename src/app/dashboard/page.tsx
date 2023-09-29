@@ -5,6 +5,7 @@ import logoPrincipal from "../../../public/assets/LOGO PRINCIPAL.png";
 import "../globals.css";
 import * as Tabs from "@radix-ui/react-tabs";
 import { Box, Text } from "@radix-ui/themes";
+import { MenuTabs } from "@/components/atoms/menuTabs";
 
 export default function Dashboard() {
   return (
@@ -19,7 +20,9 @@ export default function Dashboard() {
         </div>
       </header>
 
-      <div className="flex gap-2">
+      <MenuTabs/>
+
+      {/* <div className="flex gap-2">
         <Tabs.Root defaultValue="account">
           <Tabs.List style={{ fontSize: "10",display:'flex',gap:'15px' }}>
             <Tabs.Trigger value="account">Account</Tabs.Trigger>
@@ -43,7 +46,7 @@ export default function Dashboard() {
             </Tabs.Content>
           </Box>
         </Tabs.Root>
-      </div>
+      </div> */}
     </main>
   );
 }
