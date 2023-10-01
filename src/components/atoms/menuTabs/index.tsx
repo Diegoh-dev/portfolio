@@ -1,3 +1,4 @@
+import { Posts } from "@/components/molecule";
 import {
   Tabs,
   TabList,
@@ -13,10 +14,10 @@ export function MenuTabs() {
   return (
     <Tabs position="relative" variant="soft-rounded" colorScheme="green">
       <TabList
-        className="flex justify-between"
+        className="flex justify-between border-gray"
         aria-orientation="horizontal"
         borderBottomWidth={"1px"}
-        borderBottomColor={'var(color-gray)'}
+        // borderBottomColor={'border-gray'}
       >
         <Tab className="font-petrov text-lg tracking-[0.1rem] p-1">Projetos</Tab>
         <Tab className="font-petrov text-lg tracking-[0.1rem] p-1">Habilidades</Tab>
@@ -28,9 +29,9 @@ export function MenuTabs() {
         bg={ theme === 'light' ? "var(--color-blue)" :"var(--color-purple)"}
         className="rounded"
       />
-      <TabPanels>
+      <TabPanels mt={'1rem'}>
         <TabPanel>
-          <p>Projetos!</p>
+          <Posts/>
         </TabPanel>
         <TabPanel>
           <p>Habilidades!</p>
