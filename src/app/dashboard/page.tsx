@@ -2,6 +2,7 @@
 import { IconUser } from "@/components/atoms/iconComponents/iconUser";
 import Image from "next/image";
 import logoPrincipal from "../../../public/assets/LOGO PRINCIPAL.png";
+import logoSegundaria from '../../../public/assets/logoSegundaria.png';
 import "../globals.css";
 import * as Tabs from "@radix-ui/react-tabs";
 import { Box, Text } from "@radix-ui/themes";
@@ -15,11 +16,16 @@ export default function Dashboard() {
     <main className="p-3">
       <header className="flex items-center">
         <div>
-          <IconUser color="var(--color-purple)" />
+          <IconUser color={theme === 'light' ? "var(--color-blue)" : "var(--color-purple)"} />
         </div>
         {/* 77px */}
         <div className="flex justify-center w-[calc(100%-82px)]">
-          <Image src={logoPrincipal} alt="logo principal" loading="lazy" />
+          <Image 
+          src={theme === 'light' ? logoSegundaria : logoPrincipal} 
+          width={theme === 'light' ? 199 : 199} 
+          alt="logo principal" 
+          loading="lazy" 
+          />
         </div>
       </header>
 
