@@ -31,6 +31,10 @@ export function MenuTabs() {
       <TabPanels mt={'.5rem'}>
         <TabPanel>
           <Posts/>
+          <Posts/>
+          <Posts/>
+          <Posts/>
+          <Posts/>
         </TabPanel>
         <TabPanel>
           <p>Habilidades!</p>

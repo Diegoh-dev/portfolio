@@ -2,7 +2,10 @@ import Image from "next/image";
 import { IconPerson } from "../atoms/iconPerson";
 import postImage from "../../../public/assets/capa.png";
 import { BarChart2, Heart, MessageCircle, Share2 } from "lucide-react";
+import { useTheme } from "next-themes";
 export function Posts() {
+  const { theme, setTheme } = useTheme();
+
   return (
     <main className="border-b-[1px] border-gray">
 
@@ -37,30 +40,33 @@ export function Posts() {
             objectFit="cover"
           />
         </section>
+        <footer className="flex justify-between items-center p-2 font-exo mt-2">
+        <div className="flex gap-1">
+          <MessageCircle size={18.75} color={theme === 'light' ? "var(--color-blue)" : "var(--color-purple)"}/>
+          <span className="text-[0.813rem]">150</span>
+        </div>
+
+        <div className="flex gap-1">
+          <Heart size={18.75} color={theme === 'light' ? "var(--color-blue)" : "var(--color-purple)"}/>
+          <span className="text-[0.813rem]">200</span>
+        </div>
+
+        <div className="flex gap-1">
+          <BarChart2 size={18.75} color={theme === 'light' ? "var(--color-blue)" : "var(--color-purple)"}/>
+          <span className="text-[0.813rem]">200</span>
+        </div>
+        
+        <div>
+          <Share2 size={18.75} color={theme === 'light' ? "var(--color-blue)" : "var(--color-purple)"}/>
+        </div>
+      </footer>
       </section>
 
       </article>
 
 
 
-      <footer className="flex justify-around items-center p-2">
-        <div className="flex gap-1">
-          <MessageCircle />
-          <span>150</span>
-        </div>
-
-        <div className="flex gap-1">
-          <Heart />
-          <span>200</span>
-        </div>
-        <div className="flex gap-1">
-          <BarChart2 />
-          <span>200</span>
-        </div>
-        <div>
-          <Share2 />
-        </div>
-      </footer>
+      
     </main>
   );
 }
