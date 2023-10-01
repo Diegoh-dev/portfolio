@@ -26,7 +26,7 @@ export function Posts() {
           </p>
         </article>
         {/* className="border max-w-full h-80" */}
-        <section className="relative  max-h-96 mt-2 min-h-fit h-72 overflow-hidden">
+        <section className="relative  max-h-96 mt-2 min-h-fit h-72 overflow-hidden rounded-2xl">
           <Image
             src={postImage}
             // width={100}
