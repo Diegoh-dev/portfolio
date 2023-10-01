@@ -1,34 +1,41 @@
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
-// import './styles.css';
-/*
+import {
+  Tabs,
+  TabList,
+  TabPanels,
+  Tab,
+  TabPanel,
+  TabIndicator,
+} from "@chakra-ui/react";
 
- => TabsRoot
- display: flex;
-  flex-direction: column;
-  width: 300px;
-  box-shadow: 0 2px 10px var(--black-a4);
-
-*/
 export function MenuTabs() {
   return (
-    <Tabs variant='line'>
-    <TabList>
-      <Tab>One</Tab>
-      <Tab>Two</Tab>
-      <Tab>Three</Tab>
-    </TabList>
-  
-    <TabPanels>
-      <TabPanel>
-        <p>one!</p>
-      </TabPanel>
-      <TabPanel>
-        <p>two!</p>
-      </TabPanel>
-      <TabPanel>
-        <p>three!</p>
-      </TabPanel>
-    </TabPanels>
-  </Tabs>
-  )
+    <Tabs position="relative" variant="soft-rounded" colorScheme="green">
+      <TabList
+        className="flex justify-between"
+        aria-orientation="horizontal"
+        borderBottomWidth={"1px"}
+      >
+        <Tab className="font-petrov text-lg tracking-[0.1rem] p-1">Projetos</Tab>
+        <Tab className="font-petrov text-lg tracking-[0.1rem] p-1">Habilidades</Tab>
+        <Tab className="font-petrov text-lg tracking-[0.1rem] p-1">Contatos</Tab>
+      </TabList>
+      <TabIndicator
+        mt="-5.8"
+        height="4px"
+        bg="var(--color-purple)"
+        className="rounded"
+      />
+      <TabPanels>
+        <TabPanel>
+          <p>one!</p>
+        </TabPanel>
+        <TabPanel>
+          <p>two!</p>
+        </TabPanel>
+        <TabPanel>
+          <p>three!</p>
+        </TabPanel>
+      </TabPanels>
+    </Tabs>
+  );
 }
