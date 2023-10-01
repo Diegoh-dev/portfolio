@@ -17,7 +17,6 @@ export function MenuTabs() {
         className="flex justify-between border-gray"
         aria-orientation="horizontal"
         borderBottomWidth={"1px"}
-        // borderBottomColor={'border-gray'}
       >
         <Tab className="font-petrov text-lg tracking-[0.1rem] p-1">Projetos</Tab>
         <Tab className="font-petrov text-lg tracking-[0.1rem] p-1">Habilidades</Tab>
@@ -29,7 +28,7 @@ export function MenuTabs() {
         bg={ theme === 'light' ? "var(--color-blue)" :"var(--color-purple)"}
         className="rounded"
       />
-      <TabPanels mt={'1rem'}>
+      <TabPanels mt={'.5rem'}>
         <TabPanel>
           <Posts/>
         </TabPanel>

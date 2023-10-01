@@ -3,7 +3,7 @@ import { IconPerson } from "../atoms/iconPerson";
 import postImage  from '../../../public/assets/capa.png';
 export function Posts(){
   return (
-    <div className="flex gap-4 border-b-[1px] border-gray p-2 ">
+    <div className="flex gap-3 border-b-[1px] border-gray p-2 ">
       <header>
         <IconPerson color="var(--color-purple)" height="40" width="40" />
       </header>
