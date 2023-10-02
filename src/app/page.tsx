@@ -35,7 +35,11 @@ export default function Home() {
 
       {/* foto de perfil */}
       <article className="absolute ml-8 my-[-32px]">
-        <IconUser color="var(--color-purple)"/>
+        <IconUser 
+         color="var(--color-purple)"
+         height="50"
+         width="50"
+         />
       </article>
 
       <section className="py-10 pr-8 pb-2 pl-8">

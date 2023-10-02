@@ -10,7 +10,11 @@ export function HeaderPrincipal(){
   return (
     <header className="flex items-center">
     <div>
-      <IconUser color={theme === 'light' ? "var(--color-blue)" : "var(--color-purple)"} />
+      <IconUser 
+      color={theme === 'light' ? "var(--color-blue)" : "var(--color-purple)"}
+      height="50"
+      width="50"
+      />
     </div>
     {/* 77px */}
     <div className="flex justify-center w-[calc(100%-82px)]">

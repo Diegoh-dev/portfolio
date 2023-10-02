@@ -1,13 +1,15 @@
 interface IconUserProps{
   color: string;
+  width:string;
+  height:string;
 }
 //#7045D4
 
-export function IconUser({color}:IconUserProps) {
+export function IconUser({color,width,height}:IconUserProps) {
   return (
     <svg
-      width="65"
-      height="65"
+      width={width}
+      height={height}
       viewBox="0 0 65 65"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

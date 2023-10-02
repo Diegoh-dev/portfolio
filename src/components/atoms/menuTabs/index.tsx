@@ -37,7 +37,7 @@ export function MenuTabs() {
           <Posts/>
         </TabPanel>
         <TabPanel>
-          <p>Habilidades!</p>
+        <Posts/>
         </TabPanel>
         <TabPanel>
           <p>Contatos!</p>

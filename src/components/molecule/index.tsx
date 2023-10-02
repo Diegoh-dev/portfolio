@@ -16,7 +16,7 @@ export function Posts() {
 
       <section>
         <header>
-          <strong>Diego rennan</strong>
+          <strong>Diego Ribeiro</strong>
         </header>
         <article>
           <p>
