@@ -13,7 +13,7 @@ export function Posts() {
       <header>
         <IconPerson color="var(--color-purple)" height="40" width="40" />
       </header>
-
+      {/* https://www.youtube.com/watch?v=oPOKpSFqy-I */}
       <section>
         <header>
           <strong>Diego Ribeiro</strong>
