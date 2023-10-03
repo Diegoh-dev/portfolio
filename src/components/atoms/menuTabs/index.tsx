@@ -1,4 +1,4 @@
-import { Posts } from "@/components/molecule";
+import { Posts } from "@/components/molecule/components";
 import {
   Tabs,
   TabList,
@@ -37,7 +37,8 @@ export function MenuTabs() {
           <Posts/>
         </TabPanel>
         <TabPanel>
-        <Posts/>
+       
+       <p>teste aqui</p>
         </TabPanel>
         <TabPanel>
           <p>Contatos!</p>

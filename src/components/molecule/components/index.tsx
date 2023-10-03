@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { IconPerson } from "../atoms/iconPerson";
-import postImage from "../../../public/assets/capa.png";
+import { IconPerson } from "../../atoms/iconPerson";
+import postImage from "./../../../../public/assets/capa.png";
 import { BarChart2, Heart, MessageCircle, Share2 } from "lucide-react";
 import { useTheme } from "next-themes";
 export function Posts() {
@@ -18,6 +18,7 @@ export function Posts() {
         <header>
           <strong>Diego Ribeiro</strong>
         </header>
+        
         <article>
           <p>
             lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
@@ -40,6 +41,7 @@ export function Posts() {
             objectFit="cover"
           />
         </section>
+        
         <footer className="flex justify-between items-center p-2 font-exo mt-2">
         <div className="flex gap-1">
           <MessageCircle size={18.75} color={theme === 'light' ? "var(--color-blue)" : "var(--color-purple)"}/>
