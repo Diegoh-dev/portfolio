@@ -10,8 +10,20 @@ import {
 import { useTheme } from "next-themes"
 import { Post } from "../../molecule/components/Post/post"
 import { BarChart2, Heart, MessageCircle, Share2 } from "lucide-react"
+import { useEffect, useState } from "react"
 export function MenuTabs() {
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme } = useTheme();
+
+  const [mounted,setMounted] = useState(false);
+
+  useEffect(()=>{
+    setMounted(true);
+  },[]);
+
+  if(!mounted){
+    return null;
+  }
+
   return (
     <Tabs position="relative" variant="soft-rounded" colorScheme="green">
       <TabList
@@ -115,7 +127,34 @@ export function MenuTabs() {
         </TabPanel>
 
         <TabPanel>
-          <p>Contatos!</p>
+        <Post.Root>
+            <Post.Header />
+            <Post.PostSection>
+              <Post.SectionHeader />
+              <Post.Content />
+              <Post.PostImage />
+            </Post.PostSection>
+          </Post.Root>
+
+
+          <Post.Root>
+            <Post.Header />
+            <Post.PostSection>
+              <Post.SectionHeader />
+              <Post.Content />
+              <Post.PostImage />
+            </Post.PostSection>
+          </Post.Root>
+
+
+          <Post.Root>
+            <Post.Header />
+            <Post.PostSection>
+              <Post.SectionHeader />
+              <Post.Content />
+              <Post.PostImage />
+            </Post.PostSection>
+          </Post.Root>
         </TabPanel>
       </TabPanels>
 

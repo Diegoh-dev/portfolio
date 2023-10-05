@@ -71,7 +71,7 @@ export default function RootLayout({
 }) {
   
   return (
-    <html lang="pt-br" suppressHydrationWarning className={`${petrov.variable} ${exo.variable}`}>
+    <html lang="pt-br" suppressHydrationWarning={true} className={`${petrov.variable} ${exo.variable}`}>
       <body>
         <Providers>
         {children}

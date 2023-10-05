@@ -3,8 +3,20 @@ import { IconPerson } from "../../atoms/iconPerson";
 import postImage from "./../../../../public/assets/capa.png";
 import { BarChart2, Heart, MessageCircle, Share2 } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 export function Posts() {
   const { theme, setTheme } = useTheme();
+
+  const [mounted,setMounted] = useState(false);
+
+  useEffect(()=>{
+    setMounted(true);
+  },[]);
+
+  if(!mounted){
+    return null;
+  }
+
 
   return (
     <main className="border-b-[1px] border-gray">
