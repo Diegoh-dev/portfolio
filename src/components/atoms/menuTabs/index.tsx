@@ -1,4 +1,4 @@
-import { Posts } from "@/components/molecule/components";
+import { Posts } from "@/components/molecule/components"
 import {
   Tabs,
   TabList,
@@ -6,12 +6,12 @@ import {
   Tab,
   TabPanel,
   TabIndicator,
-} from "@chakra-ui/react";
-import { useTheme } from "next-themes";
-import {Post} from '../../molecule/components/Post/post';
-import { MessageCircle } from "lucide-react";
+} from "@chakra-ui/react"
+import { useTheme } from "next-themes"
+import { Post } from "../../molecule/components/Post/post"
+import { BarChart2, Heart, MessageCircle, Share2 } from "lucide-react"
 export function MenuTabs() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme()
   return (
     <Tabs position="relative" variant="soft-rounded" colorScheme="green">
       <TabList
@@ -44,16 +44,63 @@ export function MenuTabs() {
               <Post.Content />
               <Post.PostImage />
               <Post.FooterRoot>
-                <Post.PostIcon  Icon={MessageCircle}/>
-                {/* repetir os outros icones */}
+                <Post.PostIcon Icon={MessageCircle}>
+                  <Post.Amount amount={150} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={Heart}>
+                  <Post.Amount amount={500} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={BarChart2}>
+                  <Post.Amount amount={1000} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={Share2}></Post.PostIcon>
               </Post.FooterRoot>
             </Post.PostSection>
           </Post.Root>
-          {/* <Posts />
-          <Posts />
-          <Posts />
-          <Posts />
-          <Posts /> */}
+
+          <Post.Root>
+            <Post.Header />
+            <Post.PostSection>
+              <Post.SectionHeader />
+              <Post.Content />
+              <Post.PostImage />
+              <Post.FooterRoot>
+                <Post.PostIcon Icon={MessageCircle}>
+                  <Post.Amount amount={150} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={Heart}>
+                  <Post.Amount amount={500} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={BarChart2}>
+                  <Post.Amount amount={1000} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={Share2}>
+                  
+                </Post.PostIcon>
+              </Post.FooterRoot>
+            </Post.PostSection>
+          </Post.Root>
+
+          <Post.Root>
+            <Post.Header />
+            <Post.PostSection>
+              <Post.SectionHeader />
+              <Post.Content />
+              <Post.PostImage />
+              <Post.FooterRoot>
+                <Post.PostIcon Icon={MessageCircle}>
+                  <Post.Amount amount={150} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={Heart}>
+                  <Post.Amount amount={500} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={BarChart2}>
+                  <Post.Amount amount={1000} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={Share2}></Post.PostIcon>
+              </Post.FooterRoot>
+            </Post.PostSection>
+          </Post.Root>
         </TabPanel>
 
         <TabPanel>

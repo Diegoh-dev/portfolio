@@ -1,3 +1,4 @@
+import { Amount } from "./PostAmount";
 import { PostContent } from "./PostContent";
 import { PostFooterRoot } from "./PostFooterRoot";
 import { PostHeader } from "./PostHeader";
@@ -16,4 +17,5 @@ export const Post = {
     PostImage:PostImageProject,
     FooterRoot:PostFooterRoot,
     PostIcon:PostIcon,
+    Amount:Amount
 }
