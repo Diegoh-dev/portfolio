@@ -1,4 +1,4 @@
-import { Posts } from "@/components/molecule/components"
+// import { Posts } from "@/components/molecule/components"
 import {
   Tabs,
   TabList,
