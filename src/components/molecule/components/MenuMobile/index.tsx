@@ -1,15 +1,19 @@
 import { IconPerson } from "@/components/atoms/iconPerson";
 import { ChevronDown, Code2, Contact, Moon, PlusCircle, Settings, Sun, User } from "lucide-react";
-
+import LogoLetraWhite from '../../../../../public/assets/logoLetraWhite.png';
+import Image from "next/image";
+import { ControllerContext } from "@/context/ControlleContext";
+import { useContext } from "react";
 interface MenuMobileProps {}
 
 export function MenuMobile() {
+  const {openMenuMobile,setOpenMenuMobile} = useContext(ControllerContext);
   return (
-    <main className="absolute z-10 bg-purple w-9/12	h-full p-2	">
+    <main className="absolute z-10 bg-purple w-9/12	h-full p-4	">
       <header className="flex gap-4">
-        <div>
+        <button onClick={()=> setOpenMenuMobile(false)}>
           <IconPerson color="var(--color-purple)" height="40" width="40" />
-        </div>
+        </button>
 
         <div>
           <strong>Diego Ribeiro</strong>
@@ -17,35 +21,44 @@ export function MenuMobile() {
         </div>
       </header>
 
-      <section className="flex justify-around py-4	border-b-[1px] border-gray mb-4">
+      <section className="flex justify-around pb-10 pt-8	border-b-[1px] border-gray mb-8">
         <span>500 Curtidas</span>
         <span>5000 Visualizações</span>
       </section>
-
-      <section className="flex flex-col gap-5">
-        <button className="flex gap-2 justify-center items-center">
+      {/* h-[calc(100%-450px)] */}
+      <section className="flex flex-col gap-12 h-[calc(100%-200px)]">
+        <button className="flex gap-4 items-center">
           <User /> Perfil
         </button>
-        <button className="flex gap-2 justify-center items-center">
+        <button className="flex gap-4 items-center">
           <Settings /> Habilidades
         </button>
-        <button className="flex gap-2 justify-center items-center">
+        <button className="flex gap-4 items-center">
           <Code2 /> Projetos
         </button>
-        <button className="flex gap-2 justify-center items-center">
+        <button className="flex gap-4 items-center">
           <Contact /> Contatos
         </button>
 
-        <button className="flex gap-2 justify-center items-center">
+        <button className="flex gap-4 items-center">
         <PlusCircle /> Mais 
         </button>
       </section>
 
-      <footer>
+      <footer className="flex justify-around mb-0">
         <button>
         <Sun />
         {/* <Moon /> */}
         </button>
+       <div >
+       <Image
+          src={LogoLetraWhite}
+          width={40}
+          height={40}
+          alt="Logo letra"
+          loading="lazy"
+        />
+       </div>
       </footer>
     </main>
   );

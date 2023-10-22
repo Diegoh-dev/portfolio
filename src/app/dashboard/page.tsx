@@ -10,7 +10,7 @@ import { ControllerContext } from "@/context/ControlleContext";
 export default function Dashboard() {
   const { theme, setTheme } = useTheme();
 
-  const {openMenuMobile} = useContext(ControllerContext);
+  const {openMenuMobile,setOpenMenuMobile} = useContext(ControllerContext);
   
   const [mounted,setMounted] = useState(false);
 
@@ -23,11 +23,10 @@ export default function Dashboard() {
   }
 
   return (
+    <>
+       {openMenuMobile && (<MenuMobile/>)}
     <main className="p-3">
       <HeaderPrincipal />
-
-      {openMenuMobile && (<MenuMobile/>)}
-      
 
       <section className="mt-4">
         <MenuTabs />
@@ -36,5 +35,6 @@ export default function Dashboard() {
       <button onClick={() => setTheme("light")}>tema light</button>
       <button onClick={() => setTheme("dark")}>tema dark</button>
     </main>
+    </>
   );
 }

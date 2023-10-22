@@ -1,16 +1,19 @@
 'use client'
 import { ControllerContextProvider } from '@/context/ControlleContext';
 import { ThemeProvider } from 'next-themes';
-import { ReactNode } from 'react';
+import { ReactNode, useContext } from 'react';
 
 interface ProvidersProps{
   children : ReactNode;
 }
 
 export function Providers({ children }: ProvidersProps) {
+
   return (
     <ControllerContextProvider>
-      <ThemeProvider>{children}</ThemeProvider>
+      <ThemeProvider>
+        {children}
+        </ThemeProvider>
     </ControllerContextProvider>
   )
 }

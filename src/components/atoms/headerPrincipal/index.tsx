@@ -13,7 +13,7 @@ export function HeaderPrincipal(){
 
   return (
     <header className="flex items-center">
-    <button onClick={() => setOpenMenuMobile(!openMenuMobile)}>
+    <button onClick={() => setOpenMenuMobile(true)}>
       <IconUser 
       color={theme === 'light' ? "var(--color-blue)" : "var(--color-purple)"}
       height="40"
