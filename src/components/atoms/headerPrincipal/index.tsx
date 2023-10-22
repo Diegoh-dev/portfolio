@@ -3,19 +3,23 @@ import { IconUser } from "../iconComponents/iconUser";
 import Image from "next/image";
 import logoPrincipal from "../../../../public/assets/LOGO PRINCIPAL.png";
 import logoSegundaria from '../../../../public/assets/logoSegundaria.png';
+import { ControllerContext } from "@/context/ControlleContext";
+import { useContext } from "react";
 
 export function HeaderPrincipal(){
   const { theme, setTheme } = useTheme();
+  const {setOpenMenuMobile,openMenuMobile} = useContext(ControllerContext);
+
 
   return (
     <header className="flex items-center">
-    <div>
+    <button onClick={() => setOpenMenuMobile(!openMenuMobile)}>
       <IconUser 
       color={theme === 'light' ? "var(--color-blue)" : "var(--color-purple)"}
-      height="50"
-      width="50"
+      height="40"
+      width="40"
       />
-    </div>
+    </button>
     {/* 77px */}
     <div className="flex justify-center w-[calc(100%-82px)]">
       <Image 
