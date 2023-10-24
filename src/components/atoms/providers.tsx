@@ -11,7 +11,7 @@ export function Providers({ children }: ProvidersProps) {
 
   return (
     <ControllerContextProvider>
-      <ThemeProvider>
+      <ThemeProvider attribute='class'>
         {children}
         </ThemeProvider>
     </ControllerContextProvider>

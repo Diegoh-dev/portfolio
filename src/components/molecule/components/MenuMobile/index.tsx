@@ -4,12 +4,16 @@ import LogoLetraWhite from '../../../../../public/assets/logoLetraWhite.png';
 import Image from "next/image";
 import { ControllerContext } from "@/context/ControlleContext";
 import { useContext } from "react";
+import { useTheme } from "next-themes";
 interface MenuMobileProps {}
 
 export function MenuMobile() {
   const {openMenuMobile,setOpenMenuMobile} = useContext(ControllerContext);
+  const { resolvedTheme } = useTheme();
+//${resolvedTheme === 'dark' ? 'bg-dark' : 'bg-light'}
+  console.log({resolvedTheme})
   return (
-    <main className="absolute z-10 bg-purple w-9/12	h-full p-4	">
+    <main className={`absolute z-10 bg-light dark:bg-dark w-9/12	h-full p-4`}>
       <header className="flex gap-4">
         <button onClick={()=> setOpenMenuMobile(false)}>
           <IconPerson color="var(--color-purple)" height="40" width="40" />

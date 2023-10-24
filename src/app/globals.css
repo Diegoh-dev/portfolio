@@ -8,4 +8,13 @@
     --color-blue: #0000FE;
     --color-purple:#7045D4;
     --color-gray:#2c2c2c;
+
+    --background: white;
+  --foreground: black;
+  
+}
+
+[data-theme='dark'] {
+  --background: black;
+  --foreground: white;
   }
