@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ControllerContext } from "@/context/ControlleContext";
 import { useContext } from "react";
 import { useTheme } from "next-themes";
+import * as Switch from '@radix-ui/react-switch';
 interface MenuMobileProps {}
 
 export function MenuMobile() {
@@ -15,7 +16,7 @@ export function MenuMobile() {
   return (
     <main className={`absolute z-10 bg-light dark:bg-dark w-9/12	h-full p-4`}>
       <header className="flex gap-4">
-        <button onClick={()=> setOpenMenuMobile(false)}>
+        <button onClick={() => setOpenMenuMobile(false)}>
           <IconPerson color="var(--color-purple)" height="40" width="40" />
         </button>
 
@@ -45,25 +46,29 @@ export function MenuMobile() {
         </button>
 
         <button className="flex gap-4 items-center">
-        <PlusCircle /> Mais 
+          <PlusCircle /> Mais
         </button>
       </section>
 
       <footer className="flex justify-around mb-0">
-        <button>
-        <Sun />
-        {/* <Moon /> */}
-        </button>
-       <div >
-       <Image
-          src={LogoLetraWhite}
-          width={40}
-          height={40}
-          alt="Logo letra"
-          loading="lazy"
-        />
-       </div>
+        <Switch.Root>
+          <Switch.Thumb />
+        </Switch.Root>
+
+        {/* <button>
+          <Sun />
+          <Moon />
+        </button> */}
+        <div>
+          <Image
+            src={LogoLetraWhite}
+            width={40}
+            height={40}
+            alt="Logo letra"
+            loading="lazy"
+          />
+        </div>
       </footer>
     </main>
-  );
+  )
 }
