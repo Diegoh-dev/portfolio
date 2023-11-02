@@ -18,3 +18,40 @@
   --background: black;
   --foreground: white;
   }
+
+  /* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-purple) var(--color-gray);
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: var(--color-gray);
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #B8C0C2;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #B8C0C2;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--color-purple);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-purple);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: var(--color-purple);
+}
