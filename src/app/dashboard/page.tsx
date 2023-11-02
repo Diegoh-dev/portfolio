@@ -32,8 +32,7 @@ export default function Dashboard() {
         <MenuTabs />
       </section>
 
-      <button onClick={() => setTheme("light")}>tema light</button>
-      <button onClick={() => setTheme("dark")}>tema dark</button>
+
     </main>
     </>
   );

@@ -10,9 +10,18 @@ interface MenuMobileProps {}
 
 export function MenuMobile() {
   const {openMenuMobile,setOpenMenuMobile} = useContext(ControllerContext);
-  const { resolvedTheme } = useTheme();
+  // const { resolvedTheme } = useTheme();
 //${resolvedTheme === 'dark' ? 'bg-dark' : 'bg-light'}
-  console.log({resolvedTheme})
+const { theme, setTheme } = useTheme();
+
+function chackTheme(checked:boolean){
+  if(checked){
+    setTheme('dark')
+  }else{
+    setTheme('light')
+
+  }
+}
   return (
     <main className={`absolute z-10 bg-light dark:bg-dark w-9/12	h-full p-4`}>
       <header className="flex gap-4">
@@ -52,7 +61,16 @@ export function MenuMobile() {
 
       <footer className="flex justify-around mb-0">
 
-     <SwitchComponent/>
+
+     <SwitchComponent 
+    onCheckedChange={(checked) => {
+      //melhorar essa logica
+      // checked ? setTheme('dark') :  setTheme('light')
+      theme === 'dark' ? setTheme('light') : setTheme('dark')
+    
+
+    }}
+     />
 
        <div >
        <Image
