@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ControllerContext } from "@/context/ControlleContext";
 import { useContext } from "react";
 import { useTheme } from "next-themes";
+import { SwitchComponent } from "@/components/atoms/switchComponent";
 interface MenuMobileProps {}
 
 export function MenuMobile() {
@@ -50,10 +51,9 @@ export function MenuMobile() {
       </section>
 
       <footer className="flex justify-around mb-0">
-        <button>
-        <Sun />
-        {/* <Moon /> */}
-        </button>
+
+     <SwitchComponent/>
+
        <div >
        <Image
           src={LogoLetraWhite}
