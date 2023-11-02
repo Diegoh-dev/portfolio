@@ -25,7 +25,7 @@ export default function Dashboard() {
   return (
     <>
        {openMenuMobile && (<MenuMobile/>)}
-    <main className="p-3">
+    <main className="p-3 w-full h-full overscroll-auto	overflow-auto">
       <HeaderPrincipal />
 
       <section className="mt-4">

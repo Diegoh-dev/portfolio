@@ -14,14 +14,7 @@ export function MenuMobile() {
 //${resolvedTheme === 'dark' ? 'bg-dark' : 'bg-light'}
 const { theme, setTheme } = useTheme();
 
-function chackTheme(checked:boolean){
-  if(checked){
-    setTheme('dark')
-  }else{
-    setTheme('light')
 
-  }
-}
   return (
     <main className={`absolute z-10 bg-light dark:bg-dark w-9/12	h-full p-4`}>
       <header className="flex gap-4">
@@ -55,7 +48,7 @@ function chackTheme(checked:boolean){
         </button>
 
         <button className="flex gap-4 items-center">
-          <PlusCircle /> Mais
+          <PlusCircle /> Configurações
         </button>
       </section>
 
@@ -66,6 +59,7 @@ function chackTheme(checked:boolean){
     onCheckedChange={(checked) => {
       //melhorar essa logica
       // checked ? setTheme('dark') :  setTheme('light')
+      console.log({checked})
       theme === 'dark' ? setTheme('light') : setTheme('dark')
     
 

@@ -72,7 +72,11 @@ export default function RootLayout({
   
   return (
     <html lang="pt-br" suppressHydrationWarning={true} className={`${petrov.variable} ${exo.variable}`}>
-      <body>
+      <body style={{
+        width:'100vw',
+        height:'100vh',
+        overflow:'hidden'
+      }}>
         <Providers>
         {children}
         </Providers>
