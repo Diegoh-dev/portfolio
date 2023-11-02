@@ -16,7 +16,7 @@ export function MenuMobile() {
   return (
     <main className={`absolute z-10 bg-light dark:bg-dark w-9/12	h-full p-4`}>
       <header className="flex gap-4">
-        <button onClick={()=> setOpenMenuMobile(false)}>
+        <button onClick={() => setOpenMenuMobile(false)}>
           <IconPerson color="var(--color-purple)" height="40" width="40" />
         </button>
 
@@ -46,7 +46,7 @@ export function MenuMobile() {
         </button>
 
         <button className="flex gap-4 items-center">
-        <PlusCircle /> Mais 
+          <PlusCircle /> Mais
         </button>
       </section>
 
@@ -65,5 +65,5 @@ export function MenuMobile() {
        </div>
       </footer>
     </main>
-  );
+  )
 }
