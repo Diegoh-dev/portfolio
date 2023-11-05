@@ -3,6 +3,8 @@ import Image from "next/image";
 import logoSegundaria from '../../../../../public/assets/logoSegundaria.png';
 import logoPrincipal from '../../../../../public/assets/LOGO PRINCIPAL.png';
 import LogoLetraWhite from '../../../../../public/assets/logoLetraWhite.png';
+import LogoLetra from '../../../../../public/assets/logoLetra.png';
+
 import { Code2, Contact, PlusCircle, Settings, User } from "lucide-react";
 import { SwitchComponent } from "@/components/atoms/switchComponent";
 export function MenuDesktop(){
@@ -51,7 +53,7 @@ export function MenuDesktop(){
 
         <div>
           <Image
-            src={LogoLetraWhite}
+            src={theme === "light" ? LogoLetra : LogoLetraWhite}
             width={40}
             height={40}
             alt="Logo letra"
