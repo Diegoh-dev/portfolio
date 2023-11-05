@@ -35,20 +35,20 @@ const { theme, setTheme } = useTheme();
       {/* h-[calc(100%-450px)] */}
       <section className="flex flex-col gap-12 h-[calc(100%-200px)]">
         <button className="flex gap-4 items-center">
-          <User /> Perfil
+          <User color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Perfil
         </button>
         <button className="flex gap-4 items-center">
-          <Settings /> Habilidades
+          <Settings color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Habilidades
         </button>
         <button className="flex gap-4 items-center">
-          <Code2 /> Projetos
+          <Code2 color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Projetos
         </button>
         <button className="flex gap-4 items-center">
-          <Contact /> Contatos
+          <Contact color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Contatos
         </button>
 
         <button className="flex gap-4 items-center">
-          <PlusCircle /> Configurações
+          <PlusCircle color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Configurações
         </button>
       </section>
 
