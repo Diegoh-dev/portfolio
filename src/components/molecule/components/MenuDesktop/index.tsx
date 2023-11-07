@@ -5,11 +5,12 @@ import logoPrincipal from '../../../../../public/assets/LOGO PRINCIPAL.png';
 import LogoLetraWhite from '../../../../../public/assets/logoLetraWhite.png';
 import LogoLetra from '../../../../../public/assets/logoLetra.png';
 
-import { Code2, Contact, PlusCircle, Settings, User } from "lucide-react";
+import { Code2, Contact, LayoutDashboard, PlusCircle, Settings, User } from "lucide-react";
 import { SwitchComponent } from "@/components/atoms/switchComponent";
+import {useRouter} from 'next/navigation';
 export function MenuDesktop(){
   const { theme, setTheme } = useTheme();
-
+  const router = useRouter()
   return (
     <div className="p-4 flex flex-col justify-around h-full border-r-[1px] border-gray">
       <header className="flex justify-center items-center">
@@ -23,8 +24,11 @@ export function MenuDesktop(){
 
       {/* componentizar */}
       <section className="flex flex-col gap-12 h-[calc(100%-200px)]">
-        <button className="flex gap-4 items-center">
+        <button className="flex gap-4 items-center" onClick={() =>  router.push('/')}>
           <User color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Perfil
+        </button>
+        <button className="flex gap-4 items-center" onClick={() =>  router.push('/dashboard')}>
+          <LayoutDashboard color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Dashboard
         </button>
         <button className="flex gap-4 items-center">
           <Settings color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Habilidades
