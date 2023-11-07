@@ -20,7 +20,8 @@ export default function Home() {
   }
 
   return (
-    <main className="max-w-full h-screen relative">
+    // max-w-full 
+    <main className="tablet:w-2/3	laptop:w-3/4 h-screen relative">
       <section className="max-w-full h-2/6 relative">
         <Image
           className="max-w-full h-full"

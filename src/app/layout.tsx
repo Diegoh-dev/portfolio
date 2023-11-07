@@ -1,5 +1,7 @@
+"use client"
 import { Providers } from '@/components/atoms/providers';
-import type { Metadata } from 'next';
+import { MenuDesktop } from '@/components/molecule/components/MenuDesktop';
+// import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 
 const petrov = localFont({
@@ -59,10 +61,10 @@ const exo = localFont({
   variable:'--font-exo'
 });
 
-export const metadata: Metadata = {
-  title: 'Diego Dev',
-  description: 'Portfolio',
-}
+// export const metadata: Metadata = {
+//   title: 'Diego Dev',
+//   description: 'Portfolio',
+// }
 
 export default function RootLayout({
   children,
@@ -75,9 +77,13 @@ export default function RootLayout({
       <body style={{
         width:'100vw',
         height:'100vh',
-        overflow:'hidden'
+        overflow:'hidden',
+        display:'flex'
       }}>
         <Providers>
+        <div className="hidden tablet:w-1/3	laptop:w-1/4 sm:block">
+        <MenuDesktop />
+        </div>
         {children}
         </Providers>
         </body>

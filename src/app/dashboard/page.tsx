@@ -27,11 +27,11 @@ export default function Dashboard() {
     <div className="tablet:flex w-screen	h-screen	">
       <div className="tablet:hidden">{openMenuMobile && <MenuMobile />}</div>
 
-      <div className="hidden tablet:w-1/3	laptop:w-1/4 sm:block">
+      {/* <div className="hidden tablet:w-1/3	laptop:w-1/4 sm:block">
         <MenuDesktop />
-      </div>
-
-      <main className="p-3 w-full h-full overscroll-auto	overflow-auto tablet:w-2/3	laptop:w-3/4">
+      </div> */}
+                                                                          {/* tablet:w-2/3	laptop:w-3/4 */}
+      <main className="p-3 w-full h-full overscroll-auto	overflow-auto ">
         <HeaderPrincipal />
 
         <section className="mt-4">
