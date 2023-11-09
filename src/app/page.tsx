@@ -61,7 +61,7 @@ export default function Home() {
         </p>
       </section>
 
-      <footer className="p-8 absolute bottom-0">
+      {/* <footer className="p-8 absolute bottom-0">
         <Image
           src={LogoLetraWhite}
           width={50}
@@ -69,7 +69,7 @@ export default function Home() {
           alt="Logo letra"
           loading="lazy"
         />
-      </footer>
+      </footer> */}
     </main>
   )
 }
