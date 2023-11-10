@@ -22,25 +22,25 @@ export function MenuDesktop(){
         />
       </header>
 
-      {/* componentizar */}
+      {/* componentizar active*/}
       <section className="flex flex-col gap-[1.2rem] text-xl h-[calc(100%-200px)]">
-        <button className=" p-3 flex gap-4 items-center hover:bg-gray hover:rounded-full " onClick={() =>  router.push('/')}>
+        <button className=" p-3 flex gap-4 items-center hover:bg-gray hover:rounded-full active:font-bold focus:font-bold" onClick={() =>  router.push('/')}>
           <User color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Perfil
         </button>
-        <button className=" p-3 flex gap-4 items-center hover:bg-gray hover:rounded-full "  onClick={() =>  router.push('/dashboard')}>
+        <button className=" p-3 flex gap-4 items-center hover:bg-gray hover:rounded-full  active:font-bold focus:font-bold "  onClick={() =>  router.push('/dashboard')}>
           <LayoutDashboard color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Dashboard
         </button>
-        <button className=" p-3 flex gap-4 items-center hover:bg-gray hover:rounded-full "  onClick={() =>  router.push('/habilidades')}>
+        <button className=" p-3 flex gap-4 items-center hover:bg-gray hover:rounded-full  active:font-bold focus:font-bold "  onClick={() =>  router.push('/habilidades')}>
           <Settings color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Habilidades
         </button>
-        <button className=" p-3 flex gap-4 items-center hover:bg-gray hover:rounded-full "  onClick={() =>  router.push('/projetos')}>
+        <button className=" p-3 flex gap-4 items-center hover:bg-gray hover:rounded-full  active:font-bold focus:font-bold "  onClick={() =>  router.push('/projetos')}>
           <Code2 color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Projetos
         </button>
-        <button className=" p-3 flex gap-4 items-center hover:bg-gray hover:rounded-full " >
+        <button className=" p-3 flex gap-4 items-center hover:bg-gray hover:rounded-full  active:font-bold focus:font-bold " >
           <Contact color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Contatos
         </button>
 
-        <button className=" p-3 flex gap-4 items-center hover:bg-gray hover:rounded-full " >
+        <button className=" p-3 flex gap-4 items-center hover:bg-gray hover:rounded-full  active:font-bold focus:font-bold " >
           <PlusCircle color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Configurações
         </button>
       </section>
