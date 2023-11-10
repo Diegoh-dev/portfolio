@@ -41,6 +41,8 @@ const config: Config = {
       'blue':'#0000FE',
       'purple':'#7045D4',
       'gray':'#2c2c2c',
+      'hoverLight':'#E7E7E8',
+      'hoverDark':'#181818',
 
     },
     fontFamily:{
