@@ -30,7 +30,7 @@ export function MenuDesktop(){
         <button className="flex gap-4 items-center" onClick={() =>  router.push('/dashboard')}>
           <LayoutDashboard color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Dashboard
         </button>
-        <button className="flex gap-4 items-center">
+        <button className="flex gap-4 items-center" onClick={() =>  router.push('/habilidades')}>
           <Settings color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Habilidades
         </button>
         <button className="flex gap-4 items-center" onClick={() =>  router.push('/projetos')}>
