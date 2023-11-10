@@ -22,7 +22,7 @@ export function MenuDesktop(){
         />
       </header>
 
-      {/* componentizar white:#E7E7E8  black:#181818*/}
+      {/* componentizar white: border-color: rgb(239, 243, 244);*/}
       <section className="flex flex-col gap-[1.2rem] text-xl h-[calc(100%-200px)]">
         <button className=" p-3 flex gap-4 items-center hover:bg-hoverLight dark:hover:bg-hoverDark hover:rounded-full active:font-bold focus:font-bold" onClick={() =>  router.push('/')}>
           <User color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Perfil
