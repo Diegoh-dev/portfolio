@@ -12,7 +12,7 @@ export function MenuDesktop(){
   const { theme, setTheme } = useTheme();
   const router = useRouter()
   return (
-    <div className="py-4 px-12 flex flex-col justify-around h-full border-r-[1px] border-gray">
+    <div className="py-4 px-12 flex flex-col justify-around h-full border-r-[1px] border-borderLight dark:border-gray">
       <header className="flex justify-center items-center">
         <Image
           src={theme === "light" ? logoSegundaria : logoPrincipal}

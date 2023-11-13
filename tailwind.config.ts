@@ -43,6 +43,7 @@ const config: Config = {
       'gray':'#2c2c2c',
       'hoverLight':'#E7E7E8',
       'hoverDark':'#181818',
+      'borderLight':'#eff3f4',
 
     },
     fontFamily:{

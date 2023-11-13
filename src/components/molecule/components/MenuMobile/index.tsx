@@ -28,7 +28,7 @@ const { theme, setTheme } = useTheme();
         </div>
       </header>
 
-      <section className="flex justify-around pb-10 pt-8	border-b-[1px] border-gray mb-8">
+      <section className="flex justify-around pb-10 pt-8	border-b-[1px] border-borderLight dark:border-gray mb-8">
         <span>500 Curtidas</span>
         <span>5000 Visualizações</span>
       </section>

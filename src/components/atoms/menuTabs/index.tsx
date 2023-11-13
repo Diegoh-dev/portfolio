@@ -27,7 +27,7 @@ export function MenuTabs() {
   return (
     <Tabs position="relative" variant="soft-rounded" colorScheme="green">
       <TabList
-        className="flex justify-between border-gray"
+        className="flex justify-between border-borderLight dark:border-gray"
         aria-orientation="horizontal"
         borderBottomWidth={"1px"}
       >
