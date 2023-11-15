@@ -49,13 +49,13 @@ export function Modal({openModal}:ModalProps){
         </Dialog.Description>
 
         <div className='w-full bg-bgConfig p-3 rounded-[22px] flex justify-between'>
-            <div className='w-28 bg-light h-16 rounded-xl '>
+            <div className='w-28 bg-light h-16 rounded-xl border-gray-3 border-[1px]'>
 
             </div>
-            <div className='w-28 bg-poucoDark h-16 rounded-xl '>
+            <div className='w-28 bg-poucoDark h-16 rounded-xl border-gray-3 border-[1px]'>
 
             </div>
-            <div className='w-28 bg-superDark h-16 rounded-xl '>
+            <div className='w-28 bg-superDark h-16 rounded-xl border-gray-3 border-[1px]'>
 
             </div>
           
