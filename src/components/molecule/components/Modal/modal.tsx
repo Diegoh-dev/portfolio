@@ -1,5 +1,6 @@
 import React from "react";
 import * as Dialog from "@radix-ui/react-dialog";
+import { Check } from "lucide-react";
 // import { Cross2Icon } from '@radix-ui/react-icons';
 
 interface ModalProps {
@@ -25,12 +26,14 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
           </Dialog.Description>
 
           <div className="w-full bg-bgConfig p-3 rounded-[22px] flex justify-between">
-            <div className="w-10 bg-blue h-10 rounded-full cursor-pointer "></div>
-            <div className="w-10 bg-purple h-10 rounded-full cursor-pointer "></div>
-            <div className="w-10 bg-yellowBg h-10 rounded-full cursor-pointer "></div>
-            <div className="w-10 bg-orangeBg h-10 rounded-full cursor-pointer "></div>
-            <div className="w-10 bg-greenBg h-10 rounded-full cursor-pointer "></div>
-            <div className="w-10 bg-pinkBg h-10 rounded-full cursor-pointer "></div>
+            <div className="w-10 bg-blue h-10 rounded-full cursor-pointer flex justify-center items-center">
+            <Check />
+            </div>
+            <div className="w-10 bg-purple h-10 rounded-full cursor-pointer flex justify-center items-center "></div>
+            <div className="w-10 bg-yellowBg h-10 rounded-full cursor-pointer flex justify-center items-center "></div>
+            <div className="w-10 bg-orangeBg h-10 rounded-full cursor-pointer flex justify-center items-center "></div>
+            <div className="w-10 bg-greenBg h-10 rounded-full cursor-pointer flex justify-center items-center "></div>
+            <div className="w-10 bg-pinkBg h-10 rounded-full cursor-pointer flex justify-center items-center "></div>
           </div>
 
           <Dialog.Description className="text-gray-2 font-semibold mt-[10px] mb-3 text-[15px] leading-normal">
