@@ -17,7 +17,7 @@ export function MenuDesktop(){
   const [openModal,setOpenModal] = useState(false);
   return (
     <>
-    {openModal && (<Modal openModal={openModal}/>)}
+    {openModal && (<Modal openModal={openModal} setOpenModal={setOpenModal}/>)}
     
     <div className="py-4 px-12 flex flex-col justify-around h-full border-r-[1px] border-borderLight dark:border-gray">
       <header className="flex justify-center items-center">
