@@ -17,7 +17,7 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
     </Dialog.Trigger> */}
       <Dialog.Portal>
         <Dialog.Overlay className="bg-blackA6 data-[state=open]:animate-overlayShow fixed inset-0" />
-        <Dialog.Content className="data-[state=open]:animate-contentShow dark:bg-dark fixed top-[50%] left-[50%] max-h-[85vh] w-[90vw] max-w-[450px] translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-white p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none">
+        <Dialog.Content className="data-[state=open]:animate-contentShow dark:bg-dark fixed top-[50%] left-[50%] max-h-[85vh] w-[90vw] max-w-[560px] translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-white p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none">
           <Dialog.Title className="text-mauve12 m-0 text-2xl font-medium">
             Personalizar sua exibição
           </Dialog.Title>
@@ -41,9 +41,22 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
           </Dialog.Description>
 
           <div className="w-full bg-bgConfig p-3 rounded-[22px] flex justify-between">
-            <div className="w-28 bg-light h-16 rounded-xl border-gray-3 border-[1px]"></div>
-            <div className="w-28 bg-poucoDark h-16 rounded-xl border-gray-3 border-[1px]"></div>
-            <div className="w-28 bg-superDark h-16 rounded-xl border-gray-3 border-[1px]"></div>
+            <div className="w-[154px] bg-light h-16 rounded-xl border-gray-3 border-[1px] flex items-center justify-center cursor-pointer">
+            <div className="flex gap-2">
+            <Check color="var(--color-dark)"/> <span className="text-poucoDark font-semibold">Padrão</span>
+            </div>
+            </div>
+            <div className="w-[154px] bg-poucoDark h-16 rounded-xl border-gray-3 border-[1px] flex items-center justify-center cursor-pointer">
+            <div className="flex gap-2">
+            <Check color="var(--color-light)"/> <span className="text-light font-semibold">Pouco escuro</span>
+            </div>
+            </div>
+            <div className="w-[154px] bg-superDark h-16 rounded-xl border-gray-3 border-[1px] flex items-center justify-center cursor-pointer">
+            <div className="flex gap-2">
+            <Check color="var(--color-light)"/> <span className="text-light font-semibold">Superescuro</span>
+            </div>
+            </div>
+            
           </div>
           <div className="mt-[25px] flex justify-end">
             <Dialog.Close asChild={true}>
