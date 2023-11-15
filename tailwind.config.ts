@@ -37,13 +37,21 @@ const config: Config = {
     },
     colors: {
       'dark':'#070707',
+      'poucoDark':'#15202B',
+      'superDark':'#000000',
       'light':'#FFF',
       'blue':'#0000FE',
       'purple':'#7045D4',
       'gray':'#2c2c2c',
+      'gray-2':'#64686D',
       'hoverLight':'#E7E7E8',
       'hoverDark':'#181818',
       'borderLight':'#eff3f4',
+      'bgConfig':'#16181C',
+      'yellowBg':'#FFD400',
+      'orangeBg':'#FF7A00',
+      'greenBg':'#00BA7C',
+      'pinkBg':'#F91880',
 
     },
     fontFamily:{
