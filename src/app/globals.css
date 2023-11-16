@@ -4,20 +4,38 @@
 
 :root {
     --color-dark: #070707;
+    --color-littleDark: #15202B;
     --color-light: #FFF;
     --color-blue: #0000FE;
     --color-purple:#7045D4;
     --color-gray:#2c2c2c;
-
-    --background: white;
-  --foreground: black;
   
 }
 
-[data-theme='dark'] {
-  --background: black;
-  --foreground: white;
-  }
+html,
+body {
+  color: #000;
+  background: #fff;
+}
+
+[data-theme='littleDark'],
+[data-theme='littleDark'] body {
+  color: var(--color-light);
+  background: var(--color-littleDark);
+}
+
+[data-theme='dark'],
+[data-theme='dark'] body {
+  color: var(--color-light);
+  background: var(--color-dark);
+}
+
+[data-theme='light'],
+[data-theme='light'] body {
+  color: var(--color-dark);
+  background: var(--color-light);
+}
+
 
   /* Firefox */
 * {

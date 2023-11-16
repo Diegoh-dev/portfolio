@@ -37,7 +37,7 @@ const config: Config = {
     },
     colors: {
       'dark':'#070707',
-      'poucoDark':'#15202B',
+      'littleDark':'#15202B',
       'superDark':'#000000',
       'light':'#FFF',
       'blue':'#0000FE',

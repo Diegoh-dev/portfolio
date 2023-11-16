@@ -58,7 +58,9 @@ export function MenuDesktop(){
             //melhorar essa logica
             // checked ? setTheme('dark') :  setTheme('light')
             console.log({ checked });
-            theme === "dark" ? setTheme("light") : setTheme("dark");
+            theme === "dark" ? setTheme("littleDark") : setTheme("dark");
+            console.log({theme})
+            console.log({['data-theme']:document.documentElement.getAttribute('data-theme')})
           }}
         />
 

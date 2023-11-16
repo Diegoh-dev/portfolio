@@ -8,10 +8,10 @@ interface ProvidersProps{
 }
 
 export function Providers({ children }: ProvidersProps) {
-
+//attribute='class'
   return (
     <ControllerContextProvider>
-      <ThemeProvider attribute='class'>
+      <ThemeProvider  themes={['light','dark','littleDark']}>
         {children}
         </ThemeProvider>
     </ControllerContextProvider>

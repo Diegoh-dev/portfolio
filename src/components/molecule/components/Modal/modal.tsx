@@ -43,10 +43,10 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
           <div className="w-full bg-bgConfig p-3 rounded-[22px] flex justify-between">
             <div className="w-[154px] bg-light h-16 rounded-xl border-gray-3 border-[1px] flex items-center justify-center cursor-pointer">
             <div className="flex gap-2">
-            <Check color="var(--color-dark)"/> <span className="text-poucoDark font-semibold">Padrão</span>
+            <Check color="var(--color-dark)"/> <span className="text-littleDark font-semibold">Padrão</span>
             </div>
             </div>
-            <div className="w-[154px] bg-poucoDark h-16 rounded-xl border-gray-3 border-[1px] flex items-center justify-center cursor-pointer">
+            <div className="w-[154px] bg-littleDark h-16 rounded-xl border-gray-3 border-[1px] flex items-center justify-center cursor-pointer">
             <div className="flex gap-2">
             <Check color="var(--color-light)"/> <span className="text-light font-semibold">Pouco escuro</span>
             </div>
