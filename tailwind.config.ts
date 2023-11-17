@@ -36,7 +36,7 @@ const config: Config = {
       }
     },
     colors: {
-      'dark':'#070707',//#1E2732
+      'dark':'#070707',//
       'littleDark':'#15202B',
       'superDark':'#000000',
       'light':'#FFF',
@@ -47,6 +47,7 @@ const config: Config = {
       'gray-3':'#333639',
       'gray-4':'#F7F9F9',
       'gray-5':'#1E2732',
+      'hoverDark-2':'#2C3640',
       'hoverLight':'#E7E7E8',
       'hoverDark':'#181818',
       'borderLight':'#eff3f4',

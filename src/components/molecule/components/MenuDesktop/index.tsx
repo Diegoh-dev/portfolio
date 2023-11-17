@@ -11,7 +11,7 @@ import {useRouter} from 'next/navigation';
 import { Modal } from "../Modal/modal";
 import { useState } from "react";
 export function MenuDesktop(){
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme ,resolvedTheme} = useTheme();
   const router = useRouter();
 
   const [openModal,setOpenModal] = useState(false);
@@ -29,31 +29,31 @@ export function MenuDesktop(){
         />
       </header>
 
-      {/* componentizar white: border-color: rgb(239, 243, 244);*/}
+      {/* componentizar  | gray-6*/}
       <section className="flex flex-col gap-[1.2rem] text-xl h-[calc(100%-200px)]">
-        <button className=" p-3 flex gap-4 items-center hover:bg-hoverLight dark:hover:bg-hoverDark hover:rounded-full active:font-bold focus:font-bold" onClick={() =>  router.push('/')}>
+        <button className={`${resolvedTheme === 'light' ? 'hover:bg-hoverLight' : resolvedTheme === 'littleDark' ? 'hover:bg-hoverDark-2' : 'hover:bg-hoverDark'} p-3 flex gap-4 items-center hover:rounded-full active:font-bold focus:font-bold`} onClick={() =>  router.push('/')}>
           <User color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Perfil
         </button>
-        <button className=" p-3 flex gap-4 items-center hover:bg-hoverLight dark:hover:bg-hoverDark hover:rounded-full  active:font-bold focus:font-bold "  onClick={() =>  router.push('/dashboard')}>
+        <button className={`${resolvedTheme === 'light' ? 'hover:bg-hoverLight' : resolvedTheme === 'littleDark' ? 'hover:bg-hoverDark-2' : 'hover:bg-hoverDark'} p-3 flex gap-4 items-center hover:bg-hoverLight dark:hover:bg-hoverDark hover:rounded-full  active:font-bold focus:font-bold`}  onClick={() =>  router.push('/dashboard')}>
           <LayoutDashboard color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Dashboard
         </button>
-        <button className=" p-3 flex gap-4 items-center hover:bg-hoverLight dark:hover:bg-hoverDark hover:rounded-full  active:font-bold focus:font-bold "  onClick={() =>  router.push('/habilidades')}>
+        <button className={`${resolvedTheme === 'light' ? 'hover:bg-hoverLight' : resolvedTheme === 'littleDark' ? 'hover:bg-hoverDark-2' : 'hover:bg-hoverDark'} p-3 flex gap-4 items-center hover:bg-hoverLight dark:hover:bg-hoverDark hover:rounded-full  active:font-bold focus:font-bold`}  onClick={() =>  router.push('/habilidades')}>
           <Settings color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Habilidades
         </button>
-        <button className=" p-3 flex gap-4 items-center hover:bg-hoverLight dark:hover:bg-hoverDark hover:rounded-full  active:font-bold focus:font-bold "  onClick={() =>  router.push('/projetos')}>
+        <button className={`${resolvedTheme === 'light' ? 'hover:bg-hoverLight' : resolvedTheme === 'littleDark' ? 'hover:bg-hoverDark-2' : 'hover:bg-hoverDark'} p-3 flex gap-4 items-center hover:bg-hoverLight dark:hover:bg-hoverDark hover:rounded-full  active:font-bold focus:font-bold`}  onClick={() =>  router.push('/projetos')}>
           <Code2 color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Projetos
         </button>
-        <button className=" p-3 flex gap-4 items-center hover:bg-hoverLight dark:hover:bg-hoverDark hover:rounded-full  active:font-bold focus:font-bold " >
+        <button className={`${resolvedTheme === 'light' ? 'hover:bg-hoverLight' : resolvedTheme === 'littleDark' ? 'hover:bg-hoverDark-2' : 'hover:bg-hoverDark'} p-3 flex gap-4 items-center hover:bg-hoverLight dark:hover:bg-hoverDark hover:rounded-full  active:font-bold focus:font-bold`} >
           <Contact color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Contatos
         </button>
 
-        <button className=" p-3 flex gap-4 items-center hover:bg-hoverLight dark:hover:bg-hoverDark hover:rounded-full  active:font-bold focus:font-bold " onClick={() => setOpenModal(true)} >
+        <button className={`${resolvedTheme === 'light' ? 'hover:bg-hoverLight' : resolvedTheme === 'littleDark' ? 'hover:bg-hoverDark-2' : 'hover:bg-hoverDark'} p-3 flex gap-4 items-center hover:bg-hoverLight dark:hover:bg-hoverDark hover:rounded-full  active:font-bold focus:font-bold`} onClick={() => setOpenModal(true)} >
           <PlusCircle color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Configurações
         </button>
       </section>
 
-      <footer className="flex justify-around mb-0">
-        <SwitchComponent
+      <footer className="flex justify-end mb-0">
+        {/* <SwitchComponent
           onCheckedChange={(checked) => {
             //melhorar essa logica
             // checked ? setTheme('dark') :  setTheme('light')
@@ -62,7 +62,7 @@ export function MenuDesktop(){
             console.log({theme})
             console.log({['data-theme']:document.documentElement.getAttribute('data-theme')})
           }}
-        />
+        /> */}
 
         <div>
           <Image
