@@ -56,6 +56,9 @@ const config: Config = {
       'orangeBg':'#FF7A00',
       'greenBg':'#00BA7C',
       'pinkBg':'#F91880',
+      'colorLabel-1':'#536471',
+      'colorLabel-2':'#8b98a5',
+      'colorLabel-3':'#71767b',
 
     },
     fontFamily:{

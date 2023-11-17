@@ -20,7 +20,7 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
           <Dialog.Title className="text-mauve12 m-0 text-2xl font-medium">
             Personalizar sua exibição
           </Dialog.Title>
-          <Dialog.Description className="text-gray-2 font-semibold mt-[10px] mb-3 text-[15px] leading-normal">
+          <Dialog.Description className={`${resolvedTheme === 'light' ? 'text-colorLabel-1' : resolvedTheme === 'littleDark' ? 'text-colorLabel-2' : 'text-colorLabel-3'} font-semibold mt-[10px] mb-3 text-[15px] leading-normal`}>
             Cor
           </Dialog.Description>
 {/* gray-4 */}
@@ -35,8 +35,8 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
             <div className="w-10 bg-greenBg h-10 rounded-full cursor-pointer flex justify-center items-center "></div>
             <div className="w-10 bg-pinkBg h-10 rounded-full cursor-pointer flex justify-center items-center "></div>
           </div>
-
-          <Dialog.Description className="text-gray-2 font-semibold mt-[10px] mb-3 text-[15px] leading-normal">
+{/* colorLabel-1 */}
+          <Dialog.Description className={`${resolvedTheme === 'light' ? 'text-colorLabel-1' : resolvedTheme === 'littleDark' ? 'text-colorLabel-2' : 'text-colorLabel-3'} text-gray-2 font-semibold mt-[10px] mb-3 text-[15px] leading-normal`}>
             Plano de fundo
           </Dialog.Description>
 
