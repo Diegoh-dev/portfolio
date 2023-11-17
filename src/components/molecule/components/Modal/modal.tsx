@@ -9,7 +9,8 @@ interface ModalProps {
   setOpenModal: (_value: boolean) => void;
 }
 export function Modal({ openModal, setOpenModal }: ModalProps) {
-  const { resolvedTheme } = useTheme();
+  const { resolvedTheme, theme, setTheme  } = useTheme();
+
   return (
     <Dialog.Root open={openModal}>
   
@@ -22,9 +23,10 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
           <Dialog.Description className="text-gray-2 font-semibold mt-[10px] mb-3 text-[15px] leading-normal">
             Cor
           </Dialog.Description>
-
-          <div className="w-full bg-bgConfig p-3 rounded-[22px] flex justify-between">
+{/* gray-4 */}
+          <div className={`${resolvedTheme === 'light' ? 'bg-gray-4' : resolvedTheme === 'littleDark' ? 'bg-gray-5' : 'bg-bgConfig'} w-full  p-3 rounded-[22px] flex justify-between`}>
             <div className="w-10 bg-blue h-10 rounded-full cursor-pointer flex justify-center items-center">
+       
             <Check />
             </div>
             <div className="w-10 bg-purple h-10 rounded-full cursor-pointer flex justify-center items-center "></div>
@@ -38,20 +40,34 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
             Plano de fundo
           </Dialog.Description>
 
-          <div className="w-full bg-bgConfig p-3 rounded-[22px] flex justify-between">
-            <div className="w-[154px] bg-light h-16 rounded-xl border-gray-3 border-[1px] flex items-center justify-center cursor-pointer">
+          <div className={`${resolvedTheme === 'light' ? 'bg-gray-4' : resolvedTheme === 'littleDark' ? 'bg-gray-5' : 'bg-bgConfig'} w-full p-3 rounded-[22px] flex justify-between`}>
+
+            <div
+             className="w-[154px] bg-light h-16 rounded-xl border-gray-3 border-[1px] flex items-center justify-center cursor-pointer relative"
+             onClick={()=> setTheme('light')}
+             >
             <div className="flex gap-2">
-            <Check color="var(--color-dark)"/> <span className="text-littleDark font-semibold">Padrão</span>
+            {resolvedTheme === 'light' && <Check color="var(--color-dark)"/>}
+            
+             <span className="text-littleDark font-semibold">Padrão</span>
             </div>
             </div>
-            <div className="w-[154px] bg-littleDark h-16 rounded-xl border-gray-3 border-[1px] flex items-center justify-center cursor-pointer">
+
+            <div
+             onClick={()=> setTheme('littleDark')}
+             className="w-[154px] bg-littleDark h-16 rounded-xl border-gray-3 border-[1px] flex items-center justify-center cursor-pointer"
+             >
             <div className="flex gap-2">
-            <Check color="var(--color-light)"/> <span className="text-light font-semibold">Pouco escuro</span>
+            {resolvedTheme === 'littleDark' && <Check color="var(--color-light)"/>}
+             <span className="text-light font-semibold">Pouco escuro</span>
             </div>
             </div>
-            <div className="w-[154px] bg-superDark h-16 rounded-xl border-gray-3 border-[1px] flex items-center justify-center cursor-pointer">
+            <div 
+              onClick={()=> setTheme('dark')}
+            className="w-[154px] bg-superDark h-16 rounded-xl border-gray-3 border-[1px] flex items-center justify-center cursor-pointer">
             <div className="flex gap-2">
-            <Check color="var(--color-light)"/> <span className="text-light font-semibold">Superescuro</span>
+            {resolvedTheme === 'dark' && <Check color="var(--color-light)"/>}
+            <span className="text-light font-semibold">Superescuro</span>
             </div>
             </div>
             
