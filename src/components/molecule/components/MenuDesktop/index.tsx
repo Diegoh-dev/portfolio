@@ -19,7 +19,7 @@ export function MenuDesktop(){
     <>
     {openModal && (<Modal openModal={openModal} setOpenModal={setOpenModal}/>)}
     
-    <div className="py-4 px-12 flex flex-col justify-around h-full border-r-[1px] border-borderLight dark:border-gray">
+    <div className={`${resolvedTheme === 'light' ? 'border-borderLight' : resolvedTheme === 'littleDark' ? 'border-border-littleDark' : 'border-border-black'} py-4 px-12 flex flex-col justify-around h-full border-r-[1px]`}>
       <header className="flex justify-center items-center">
         <Image
           src={theme === "light" ? logoSegundaria : logoPrincipal}
@@ -29,7 +29,7 @@ export function MenuDesktop(){
         />
       </header>
 
-      {/* componentizar  | gray-6*/}
+      {/* componentizar  | border: pouco black:#38444d*/}
       <section className="flex flex-col gap-[1.2rem] text-xl h-[calc(100%-200px)]">
         <button className={`${resolvedTheme === 'light' ? 'hover:bg-hoverLight' : resolvedTheme === 'littleDark' ? 'hover:bg-hoverDark-2' : 'hover:bg-hoverDark'} p-3 flex gap-4 items-center hover:rounded-full active:font-bold focus:font-bold`} onClick={() =>  router.push('/')}>
           <User color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Perfil

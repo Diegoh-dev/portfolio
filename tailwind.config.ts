@@ -59,6 +59,8 @@ const config: Config = {
       'colorLabel-1':'#536471',
       'colorLabel-2':'#8b98a5',
       'colorLabel-3':'#71767b',
+      'border-littleDark':'#38444d',
+      'border-black':'#2f3336',
 
     },
     fontFamily:{

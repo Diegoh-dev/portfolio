@@ -12,7 +12,7 @@ import { Post } from "../../molecule/components/Post/post"
 import { BarChart2, Heart, MessageCircle, Share2 } from "lucide-react"
 import { useEffect, useState } from "react"
 export function MenuTabs() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme ,resolvedTheme} = useTheme();
 
   const [mounted,setMounted] = useState(false);
 
@@ -27,7 +27,7 @@ export function MenuTabs() {
   return (
     <Tabs position="relative" variant="soft-rounded" colorScheme="green">
       <TabList
-        className="flex justify-between border-borderLight dark:border-gray"
+        className={`${resolvedTheme === 'light' ? 'border-borderLight' : resolvedTheme === 'littleDark' ? 'border-border-littleDark' : 'border-border-black'} flex justify-between` }
         aria-orientation="horizontal"
         borderBottomWidth={"1px"}
       >
