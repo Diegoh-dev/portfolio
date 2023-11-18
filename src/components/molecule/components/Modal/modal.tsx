@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Check } from "lucide-react";
 import { useTheme } from "next-themes";
+import { ControllerContext } from "@/context/ControlleContext";
 // import { Cross2Icon } from '@radix-ui/react-icons';
 
 interface ModalProps {
@@ -9,9 +10,10 @@ interface ModalProps {
   setOpenModal: (_value: boolean) => void;
 }
 export function Modal({ openModal, setOpenModal }: ModalProps) {
+  const {setColor,color} = useContext(ControllerContext)
   const { resolvedTheme, theme, setTheme  } = useTheme();
 
-  const [color,setColor] = useState('blue');
+  
 console.log({color})
   return (
     <Dialog.Root open={openModal}>
