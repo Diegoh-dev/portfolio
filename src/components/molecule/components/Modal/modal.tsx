@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Check } from "lucide-react";
 import { useTheme } from "next-themes";
@@ -11,6 +11,8 @@ interface ModalProps {
 export function Modal({ openModal, setOpenModal }: ModalProps) {
   const { resolvedTheme, theme, setTheme  } = useTheme();
 
+  const [color,setColor] = useState('blue');
+console.log({color})
   return (
     <Dialog.Root open={openModal}>
   
@@ -25,15 +27,24 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
           </Dialog.Description>
 {/* gray-4 */}
           <div className={`${resolvedTheme === 'light' ? 'bg-gray-4' : resolvedTheme === 'littleDark' ? 'bg-gray-5' : 'bg-bgConfig'} w-full  p-3 rounded-[22px] flex justify-between`}>
-            <div className="w-10 bg-blue h-10 rounded-full cursor-pointer flex justify-center items-center">
-       
-            <Check />
+            <div onClick={() => setColor('blue')} className="w-10 bg-blue h-10 rounded-full cursor-pointer flex justify-center items-center">
+            {color === 'blue' && <Check/>}
             </div>
-            <div className="w-10 bg-purple h-10 rounded-full cursor-pointer flex justify-center items-center "></div>
-            <div className="w-10 bg-yellowBg h-10 rounded-full cursor-pointer flex justify-center items-center "></div>
-            <div className="w-10 bg-orangeBg h-10 rounded-full cursor-pointer flex justify-center items-center "></div>
-            <div className="w-10 bg-greenBg h-10 rounded-full cursor-pointer flex justify-center items-center "></div>
-            <div className="w-10 bg-pinkBg h-10 rounded-full cursor-pointer flex justify-center items-center "></div>
+            <div onClick={() => setColor('purple')} className="w-10 bg-purple h-10 rounded-full cursor-pointer flex justify-center items-center ">
+            {color === 'purple' && <Check/>}
+            </div>
+            <div onClick={() => setColor('yellow')} className="w-10 bg-yellowBg h-10 rounded-full cursor-pointer flex justify-center items-center ">
+            {color === 'yellow' && <Check/>}
+            </div>
+            <div onClick={() => setColor('orange')} className="w-10 bg-orangeBg h-10 rounded-full cursor-pointer flex justify-center items-center ">
+            {color === 'orange' && <Check/>}
+            </div>
+            <div onClick={() => setColor('green')} className="w-10 bg-greenBg h-10 rounded-full cursor-pointer flex justify-center items-center ">
+            {color === 'green' && <Check/>}
+            </div>
+            <div onClick={() => setColor('pink')} className="w-10 bg-pinkBg h-10 rounded-full cursor-pointer flex justify-center items-center ">
+            {color === 'pink' && <Check/>}
+            </div>
           </div>
 {/* colorLabel-1 */}
           <Dialog.Description className={`${resolvedTheme === 'light' ? 'text-colorLabel-1' : resolvedTheme === 'littleDark' ? 'text-colorLabel-2' : 'text-colorLabel-3'} text-gray-2 font-semibold mt-[10px] mb-3 text-[15px] leading-normal`}>
