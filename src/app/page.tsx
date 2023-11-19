@@ -1,7 +1,7 @@
 "use client"
 import "./globals.css";
 import Image from "next/image";
-import imageCapa from "../../public/assets/capa.png";
+import imageCapa from "../../public/assets/capa-portfolio.png";
 import { useTheme } from "next-themes";
 import { useContext, useEffect, useState } from "react";
 import { PartyPopper, User2 } from "lucide-react";
@@ -25,7 +25,8 @@ export default function Home() {
   return (
     // max-w-full 
     <main className="tablet:w-2/3	laptop:w-3/4 h-screen relative">
-      <section className="max-w-full h-2/6 relative">
+      <section className="max-w-full h-[37.333333%] relative">
+        {/* h-2/6 */}
         <Image
           className="max-w-full h-full"
           src={imageCapa}
