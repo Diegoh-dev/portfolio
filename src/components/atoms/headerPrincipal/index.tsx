@@ -2,7 +2,7 @@ import { useTheme } from "next-themes";
 import { IconUser } from "../iconComponents/iconUser";
 import Image from "next/image";
 import logoPrincipal from "../../../../public/assets/LOGO PRINCIPAL.png";
-import logoSegundaria from '../../../../public/assets/logoSegundaria.png';
+import logoSegundaria from '../../../../public/assets/logo2.png';
 import { ControllerContext } from "@/context/ControlleContext";
 import { useContext } from "react";
 

@@ -1,6 +1,6 @@
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import logoSegundaria from '../../../../../public/assets/logoSegundaria.png';
+import logoSegundaria from '../../../../../public/assets/logo2.png';
 import logoPrincipal from '../../../../../public/assets/LOGO PRINCIPAL.png';
 import LogoLetraWhite from '../../../../../public/assets/logoLetraWhite.png';
 import LogoLetra from '../../../../../public/assets/logoLetra.png';
