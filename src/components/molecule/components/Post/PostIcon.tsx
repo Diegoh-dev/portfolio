@@ -26,7 +26,7 @@ export function PostIcon({Icon,children}:PostIconProps){
 
 
     return (
-        <div className="flex gap-1">
+        <div className="flex gap-1 cursor-pointer">
           <Icon size={18.75} color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)"  : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `}/>
         {children}
         </div>
