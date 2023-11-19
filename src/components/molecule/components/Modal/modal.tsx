@@ -13,49 +13,7 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
   const {setColor,color} = useContext(ControllerContext)
   const { resolvedTheme, theme, setTheme  } = useTheme();
 
-  
-console.log({color})
-console.log({resolvedTheme})
-console.log({primeiro:`${ resolvedTheme === "light" &&
-color === "blue"
-  ? "border-blue"
-  : color === "purple"
-  ? "border-purple"
-  : color === "yellow"
-  ? "border-yellowBg"
-  : color === "orange"
-  ? "border-orangeBg"
-  : color === "green"
-  ? "border-greenBg"
-  : color === "pink" ? "border-pinkBg" : "border-gray-3"
-}`})
 
-console.log({segundo:`${ resolvedTheme === "littleDark" &&
-color === "blue"
-  ? "border-blue"
-  : resolvedTheme === "littleDark" &&  color === "purple"
-  ? "border-purple"
-  : resolvedTheme === "littleDark" && color === "yellow"
-  ? "border-yellowBg"
-  :resolvedTheme === "littleDark" && color === "orange"
-  ? "border-orangeBg"
-  : resolvedTheme === "littleDark" && color === "green"
-  ? "border-greenBg"
-  :resolvedTheme === "littleDark" && color === "pink" ? "border-pinkBg" : "border-gray-3"
-}`})
-console.log({terceiro:`${ resolvedTheme === "dark" &&
-color === "blue"
-  ? "border-blue"
-  : color === "purple"
-  ? "border-purple"
-  : color === "yellow"
-  ? "border-yellowBg"
-  : color === "orange"
-  ? "border-orangeBg"
-  : color === "green"
-  ? "border-greenBg"
-  : color === "pink" ? "border-pinkBg" : "border-gray-3"
-}`})
   return (
     <Dialog.Root open={openModal}>
       <Dialog.Portal>
