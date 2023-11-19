@@ -9,12 +9,14 @@ import { Code2, Contact, LayoutDashboard, PlusCircle, Settings, User } from "luc
 import { SwitchComponent } from "@/components/atoms/switchComponent";
 import {useRouter} from 'next/navigation';
 import { Modal } from "../Modal/modal";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ControllerContext } from "@/context/ControlleContext";
 export function MenuDesktop(){
   const { theme, setTheme ,resolvedTheme} = useTheme();
   const router = useRouter();
 
   const [openModal,setOpenModal] = useState(false);
+  const {color} = useContext(ControllerContext)
   return (
     <>
     {openModal && (<Modal openModal={openModal} setOpenModal={setOpenModal}/>)}
@@ -32,23 +34,23 @@ export function MenuDesktop(){
       {/* componentizar  | border: pouco black:#38444d*/}
       <section className="flex flex-col gap-[1.2rem] text-xl h-[calc(100%-200px)]">
         <button className={`${resolvedTheme === 'light' ? 'hover:bg-hoverLight' : resolvedTheme === 'littleDark' ? 'hover:bg-hoverDark-2' : 'hover:bg-hoverDark'} p-3 flex gap-4 items-center hover:rounded-full active:font-bold focus:font-bold`} onClick={() =>  router.push('/')}>
-          <User color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Perfil
+          <User color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)"  : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `}/> Perfil
         </button>
         <button className={`${resolvedTheme === 'light' ? 'hover:bg-hoverLight' : resolvedTheme === 'littleDark' ? 'hover:bg-hoverDark-2' : 'hover:bg-hoverDark'} p-3 flex gap-4 items-center  hover:rounded-full  active:font-bold focus:font-bold`}  onClick={() =>  router.push('/dashboard')}>
-          <LayoutDashboard color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Dashboard
+          <LayoutDashboard color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)"  : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `}/> Dashboard
         </button>
         <button className={`${resolvedTheme === 'light' ? 'hover:bg-hoverLight' : resolvedTheme === 'littleDark' ? 'hover:bg-hoverDark-2' : 'hover:bg-hoverDark'} p-3 flex gap-4 items-center  hover:rounded-full  active:font-bold focus:font-bold`}  onClick={() =>  router.push('/habilidades')}>
-          <Settings color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Habilidades
+          <Settings color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)"  : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `}/> Habilidades
         </button>
         <button className={`${resolvedTheme === 'light' ? 'hover:bg-hoverLight' : resolvedTheme === 'littleDark' ? 'hover:bg-hoverDark-2' : 'hover:bg-hoverDark'} p-3 flex gap-4 items-center  hover:rounded-full  active:font-bold focus:font-bold`}  onClick={() =>  router.push('/projetos')}>
-          <Code2 color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Projetos
+          <Code2 color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)"  : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `}/> Projetos
         </button>
         <button className={`${resolvedTheme === 'light' ? 'hover:bg-hoverLight' : resolvedTheme === 'littleDark' ? 'hover:bg-hoverDark-2' : 'hover:bg-hoverDark'} p-3 flex gap-4 items-center  hover:rounded-full  active:font-bold focus:font-bold`} >
-          <Contact color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Contatos
+          <Contact color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)"  : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `}/> Contatos
         </button>
 
         <button className={`${resolvedTheme === 'light' ? 'hover:bg-hoverLight' : resolvedTheme === 'littleDark' ? 'hover:bg-hoverDark-2' : 'hover:bg-hoverDark'} p-3 flex gap-4 items-center hover:rounded-full  active:font-bold focus:font-bold`} onClick={() => setOpenModal(true)} >
-          <PlusCircle color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Configurações
+          <PlusCircle color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)"  : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `}/> Configurações
         </button>
       </section>
 

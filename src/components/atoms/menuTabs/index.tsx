@@ -10,11 +10,14 @@ import {
 import { useTheme } from "next-themes"
 import { Post } from "../../molecule/components/Post/post"
 import { BarChart2, Heart, MessageCircle, Share2 } from "lucide-react"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
+import { ControllerContext } from "@/context/ControlleContext"
 export function MenuTabs() {
   const { theme, setTheme ,resolvedTheme} = useTheme();
 
   const [mounted,setMounted] = useState(false);
+
+  const {color} = useContext(ControllerContext);
 
   useEffect(()=>{
     setMounted(true);
@@ -44,7 +47,7 @@ export function MenuTabs() {
       <TabIndicator
         mt="-5.8"
         height="4px"
-        bg={theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}
+        bg={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)"  : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `}
         className="rounded"
       />
       <TabPanels mt={".5rem"}>

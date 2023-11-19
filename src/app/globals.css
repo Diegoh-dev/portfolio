@@ -9,7 +9,10 @@
     --color-blue: #0000FE;
     --color-purple:#7045D4;
     --color-gray:#2c2c2c;
-  
+    --color-yellow:#FFD400;
+    --color-orange:#FF7A00;
+    --color-green:#00BA7C;
+    --color-pink:#F91880;
 }
 
 html,
