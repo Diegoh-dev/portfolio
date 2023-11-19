@@ -4,14 +4,14 @@ import Image from "next/image";
 import imageCapa from "../../public/assets/capa-portfolio.png";
 import { useTheme } from "next-themes";
 import { useContext, useEffect, useState } from "react";
-import { PartyPopper, User2 } from "lucide-react";
+import { GraduationCap, PartyPopper, User2 } from "lucide-react";
 import { IconUser } from "@/components/atoms/iconComponents/iconUser";
 import LogoLetraWhite from '../../public/assets/logoLetraWhite.png';
 import { ControllerContext } from "@/context/ControlleContext";
 
 export default function Home() {
   const [mounted,setMounted] = useState(false);
-  const {theme,setTheme} = useTheme();
+  const {theme,setTheme,resolvedTheme} = useTheme();
   const {color} = useContext(ControllerContext);
 
   useEffect(()=>{
@@ -52,9 +52,37 @@ export default function Home() {
           Diego Ribeiro
         </p>
         <span className="text-sm tracking-wide">Desenvolvedor Web & Mobile</span>
-        <span className="text-sm tracking-wide flex gap-3">
-        <PartyPopper size={18} color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)"  : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `}/>
+        <span className={ `${
+              resolvedTheme === "light"
+                ? "text-colorLabel-1"
+                : resolvedTheme === "littleDark"
+                ? "text-colorLabel-2"
+                : "text-colorLabel-3"
+            } text-sm tracking-wide flex gap-3` }>
+        <PartyPopper size={18} color={`${
+              resolvedTheme === "light"
+                ? "var(--colorLabel-1)"
+                : resolvedTheme === "littleDark"
+                ? "var(--colorLabel-2)"
+                : "var(--colorLabel-3)"
+            }`}/>
           Nascido em 16 de agosto de 1999
+          </span>
+        <span className={ `${
+              resolvedTheme === "light"
+                ? "text-colorLabel-1"
+                : resolvedTheme === "littleDark"
+                ? "text-colorLabel-2"
+                : "text-colorLabel-3"
+            } text-sm tracking-wide flex gap-3` }>
+        <GraduationCap size={18} color={`${
+              resolvedTheme === "light"
+                ? "var(--colorLabel-1)"
+                : resolvedTheme === "littleDark"
+                ? "var(--colorLabel-2)"
+                : "var(--colorLabel-3)"
+            }`}/>
+          Análise e Desenvolvimento de Sistemas
           </span>
       </section>
 

@@ -96,7 +96,7 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
                 : resolvedTheme === "littleDark"
                 ? "text-colorLabel-2"
                 : "text-colorLabel-3"
-            } text-gray-2 font-semibold mt-[10px] mb-3 text-[15px] leading-normal`}
+            } font-semibold mt-[10px] mb-3 text-[15px] leading-normal`}
           >
             Plano de fundo
           </Dialog.Description>
