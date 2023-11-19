@@ -13,6 +13,7 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
   const {setColor,color} = useContext(ControllerContext)
   const { resolvedTheme, theme, setTheme  } = useTheme();
 
+  const colorStorage = localStorage.getItem("color");
 
   return (
     <Dialog.Root open={openModal}>
@@ -52,37 +53,55 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
             } w-full  p-3 rounded-[22px] flex justify-between`}
           >
             <div
-              onClick={() => setColor("blue")}
+              onClick={() => {
+                  localStorage.setItem("color", "blue");
+                setColor("blue");
+              }}
               className="w-10 bg-blue h-10 rounded-full cursor-pointer flex justify-center items-center"
             >
               {color === "blue" && <Check />}
             </div>
             <div
-              onClick={() => setColor("purple")}
+                 onClick={() => {
+                  localStorage.setItem("color", "purple");
+                setColor("purple");
+              }}
               className="w-10 bg-purple h-10 rounded-full cursor-pointer flex justify-center items-center "
             >
               {color === "purple" && <Check />}
             </div>
             <div
-              onClick={() => setColor("yellow")}
+               onClick={() => {
+                  localStorage.setItem("color", "yellow");
+                setColor('yellow');
+              }}
               className="w-10 bg-yellowBg h-10 rounded-full cursor-pointer flex justify-center items-center "
             >
               {color === "yellow" && <Check />}
             </div>
             <div
-              onClick={() => setColor("orange")}
+               onClick={() => {
+                localStorage.setItem("color", "orange");
+              setColor('orange');
+            }}
               className="w-10 bg-orangeBg h-10 rounded-full cursor-pointer flex justify-center items-center "
             >
               {color === "orange" && <Check />}
             </div>
             <div
-              onClick={() => setColor("green")}
+            onClick={() => {
+              localStorage.setItem("color", "green");
+            setColor("green");
+          }}
               className="w-10 bg-greenBg h-10 rounded-full cursor-pointer flex justify-center items-center "
             >
               {color === "green" && <Check />}
             </div>
             <div
-              onClick={() => setColor("pink")}
+             onClick={() => {
+              localStorage.setItem("color", "pink");
+            setColor( "pink");
+          }}
               className="w-10 bg-pinkBg h-10 rounded-full cursor-pointer flex justify-center items-center "
             >
               {color === "pink" && <Check />}

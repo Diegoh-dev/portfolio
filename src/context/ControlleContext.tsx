@@ -1,10 +1,10 @@
-import { ReactNode, createContext, useState } from "react";
+import { Dispatch, ReactNode, SetStateAction, createContext, useState } from "react";
 
 interface ControllerContextProps{
   setOpenMenuMobile:(_value:boolean) => void;
   openMenuMobile:boolean;
-  setColor:(_cor:string) => void;
-  color:string;
+  setColor:Dispatch<SetStateAction<string>>;
+  color:string | null;
 }
 
 export const ControllerContext = createContext({} as ControllerContextProps);
@@ -16,8 +16,14 @@ interface ControllerContextProviderProps{
 
 export function ControllerContextProvider({children}:ControllerContextProviderProps){
 
+
+
   const [openMenuMobile,setOpenMenuMobile] = useState(false);
-  const [color,setColor] = useState('blue');
+  const colorStorage = localStorage.getItem("color");
+
+  console.log(colorStorage)
+
+  const [color,setColor] = useState( colorStorage ? colorStorage : 'blue');
   return (
     <ControllerContext.Provider value={{
       openMenuMobile,
