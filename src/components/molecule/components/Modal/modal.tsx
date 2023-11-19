@@ -203,7 +203,7 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
                     : "bg-pinkBg"
                 }  
             rounded-full
-             text-green11 
+             text-light 
              hover:bg-green5 
              focus:shadow-green7 
              inline-flex 
