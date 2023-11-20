@@ -1,6 +1,7 @@
 'use client'
 import { Post } from "@/components/molecule/components/Post/post";
 import { BarChart2, Heart, MessageCircle, Share2 } from "lucide-react";
+import { toast } from "react-toastify";
 
 export default function Projetos(){
     return (
@@ -13,14 +14,20 @@ export default function Projetos(){
               <Post.Content />
               <Post.PostImage />
               <Post.FooterRoot>
-                <Post.PostIcon Icon={MessageCircle}>
-                  <Post.Amount amount={150} />
+                <Post.PostIcon Icon={MessageCircle} onClick={()=>{
+                  toast.warn('Em desenvolvimento')
+                }}>
+                  <Post.Amount />
                 </Post.PostIcon>
-                <Post.PostIcon Icon={Heart}>
-                  <Post.Amount amount={500} />
+                <Post.PostIcon Icon={Heart} onClick={()=>{
+                  toast.warn('Em desenvolvimento')
+                }}>
+                  <Post.Amount />
                 </Post.PostIcon>
-                <Post.PostIcon Icon={BarChart2}>
-                  <Post.Amount amount={1000} />
+                <Post.PostIcon Icon={BarChart2} onClick={()=>{
+                  toast.warn('Em desenvolvimento')
+                }}>
+                  <Post.Amount />
                 </Post.PostIcon>
                 <Post.PostIcon Icon={Share2}></Post.PostIcon>
               </Post.FooterRoot>
@@ -35,13 +42,13 @@ export default function Projetos(){
               <Post.PostImage />
               <Post.FooterRoot>
                 <Post.PostIcon Icon={MessageCircle}>
-                  <Post.Amount amount={150} />
+                  <Post.Amount  />
                 </Post.PostIcon>
                 <Post.PostIcon Icon={Heart}>
-                  <Post.Amount amount={500} />
+                  <Post.Amount  />
                 </Post.PostIcon>
                 <Post.PostIcon Icon={BarChart2}>
-                  <Post.Amount amount={1000} />
+                  <Post.Amount  />
                 </Post.PostIcon>
                 <Post.PostIcon Icon={Share2}>
                   
@@ -58,13 +65,13 @@ export default function Projetos(){
               <Post.PostImage />
               <Post.FooterRoot>
                 <Post.PostIcon Icon={MessageCircle}>
-                  <Post.Amount amount={150} />
+                  <Post.Amount  />
                 </Post.PostIcon>
                 <Post.PostIcon Icon={Heart}>
-                  <Post.Amount amount={500} />
+                  <Post.Amount />
                 </Post.PostIcon>
                 <Post.PostIcon Icon={BarChart2}>
-                  <Post.Amount amount={1000} />
+                  <Post.Amount  />
                 </Post.PostIcon>
                 <Post.PostIcon Icon={Share2}></Post.PostIcon>
               </Post.FooterRoot>

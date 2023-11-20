@@ -11,6 +11,7 @@ import {useRouter} from 'next/navigation';
 import { Modal } from "../Modal/modal";
 import { useContext, useState } from "react";
 import { ControllerContext } from "@/context/ControlleContext";
+import { toast } from "react-toastify";
 export function MenuDesktop(){
   const { theme, setTheme ,resolvedTheme} = useTheme();
   const router = useRouter();
@@ -45,7 +46,11 @@ export function MenuDesktop(){
         <button className={`${resolvedTheme === 'light' ? 'hover:bg-hoverLight' : resolvedTheme === 'littleDark' ? 'hover:bg-hoverDark-2' : 'hover:bg-hoverDark'} p-3 flex gap-4 items-center  hover:rounded-full  active:font-bold focus:font-bold`}  onClick={() =>  router.push('/projetos')}>
           <Code2 color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)"  : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `}/> Projetos
         </button>
-        <button className={`${resolvedTheme === 'light' ? 'hover:bg-hoverLight' : resolvedTheme === 'littleDark' ? 'hover:bg-hoverDark-2' : 'hover:bg-hoverDark'} p-3 flex gap-4 items-center  hover:rounded-full  active:font-bold focus:font-bold`} >
+        <button 
+        onClick={()=> {
+          toast.success("teste!");
+        }}
+        className={`${resolvedTheme === 'light' ? 'hover:bg-hoverLight' : resolvedTheme === 'littleDark' ? 'hover:bg-hoverDark-2' : 'hover:bg-hoverDark'} p-3 flex gap-4 items-center  hover:rounded-full  active:font-bold focus:font-bold`} >
           <Contact color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)"  : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `}/> Contatos
         </button>
 

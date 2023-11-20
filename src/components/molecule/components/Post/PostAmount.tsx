@@ -1,5 +1,5 @@
 interface AmountProps{
-    amount:number
+    amount?:number
 }
 export function Amount({amount}:AmountProps){
     return(
