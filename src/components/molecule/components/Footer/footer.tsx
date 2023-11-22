@@ -1,6 +1,7 @@
 import { ControllerContext } from "@/context/ControlleContext";
 import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 import { useContext } from "react";
 
 export function FooterComponent(){
@@ -21,9 +22,9 @@ export function FooterComponent(){
 
         <article
           className={`
-          p-3 rounded-[22px] flex items-center justify-center gap-4 w-3/4`}
+           rounded-[22px] flex items-center justify-center gap-4 w-3/4`}
         >
-          <button className={`${resolvedTheme === 'light' ? 'border-borderLight' : resolvedTheme === 'littleDark' ? 'border-border-littleDark' : 'border-border-black'} border-[1px] p-2 rounded-lg`}>
+          <Link href={"https://www.linkedin.com/in/diego-costa-dev/"} target="_blank" className={`${resolvedTheme === 'light' ? 'border-borderLight' : resolvedTheme === 'littleDark' ? 'border-border-littleDark' : 'border-border-black'} border-[1px] p-2 rounded-lg`}>
           <Linkedin
             color={`${
               color === "blue"
@@ -40,9 +41,9 @@ export function FooterComponent(){
             } `}
           />
 
-          </button>
+          </Link>
 
-         <button className={`${resolvedTheme === 'light' ? 'border-borderLight' : resolvedTheme === 'littleDark' ? 'border-border-littleDark' : 'border-border-black'} border-[1px] p-2 rounded-lg`}>
+         <Link href={"https://www.instagram.com/diegoh_dev/"} target="_blank" className={`${resolvedTheme === 'light' ? 'border-borderLight' : resolvedTheme === 'littleDark' ? 'border-border-littleDark' : 'border-border-black'} border-[1px] p-2 rounded-lg`}>
          <Instagram
             color={`${
               color === "blue"
@@ -58,9 +59,9 @@ export function FooterComponent(){
                 : "var(--color-pink)"
             } `}
           />
-         </button>
+         </Link>
 
-         <button className={`${resolvedTheme === 'light' ? 'border-borderLight' : resolvedTheme === 'littleDark' ? 'border-border-littleDark' : 'border-border-black'} border-[1px] p-2 rounded-lg`}>
+         <Link href={"https://github.com/Diegoh-dev"} target="_blank" className={`${resolvedTheme === 'light' ? 'border-borderLight' : resolvedTheme === 'littleDark' ? 'border-border-littleDark' : 'border-border-black'} border-[1px] p-2 rounded-lg`}>
          <Github
             color={`${
               color === "blue"
@@ -76,8 +77,9 @@ export function FooterComponent(){
                 : "var(--color-pink)"
             } `}
           />
-         </button>
-         <button className={`${resolvedTheme === 'light' ? 'border-borderLight' : resolvedTheme === 'littleDark' ? 'border-border-littleDark' : 'border-border-black'} border-[1px] p-2 rounded-lg`}>
+         </Link>
+
+         <Link href={"https://twitter.com/DiegoCo45286293"} target="_blank" className={`${resolvedTheme === 'light' ? 'border-borderLight' : resolvedTheme === 'littleDark' ? 'border-border-littleDark' : 'border-border-black'} border-[1px] p-2 rounded-lg`}>
          <Twitter
             color={`${
               color === "blue"
@@ -93,7 +95,7 @@ export function FooterComponent(){
                 : "var(--color-pink)"
             } `}
           />
-         </button>
+         </Link>
 
 
         </article>
