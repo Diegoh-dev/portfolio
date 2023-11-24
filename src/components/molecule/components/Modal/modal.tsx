@@ -14,7 +14,7 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
   const { resolvedTheme, theme, setTheme  } = useTheme();
 
   const colorStorage = localStorage.getItem("color");
-
+//sm
   return (
     <>
       
@@ -52,7 +52,7 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
                   : resolvedTheme === "littleDark"
                   ? "bg-gray-5"
                   : "bg-bgConfig"
-              } w-full  p-3 rounded-[22px] flex justify-between`}
+              } w-full  p-3 rounded-[22px] gap-[1px] flex tablet:flex-row tablet:justify-between`}
             >
               <div
                 onClick={() => {
@@ -129,7 +129,8 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
                   : resolvedTheme === "littleDark"
                   ? "bg-gray-5"
                   : "bg-bgConfig"
-              } w-full p-3 rounded-[22px] flex justify-between`}
+
+              } w-full p-3 rounded-[22px] gap-2 flex flex-col tablet:flex-row	 tablet:justify-between`}
             >
               <div
                 className={`${
@@ -146,7 +147,7 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
                     : resolvedTheme === "light" && color === "pink"
                     ? "border-pinkBg"
                     : "border-gray-3"
-                } w-[154px] bg-light h-16 rounded-xl border-[1px] flex items-center justify-center cursor-pointer relative`}
+                } tablet:w-[154px] bg-light h-16 rounded-xl border-[1px] flex items-center justify-center cursor-pointer relative w-full`}
                 onClick={() => setTheme("light")}
               >
                 <div className="flex gap-2">
@@ -173,7 +174,7 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
                     : resolvedTheme === "littleDark" && color === "pink"
                     ? "border-pinkBg"
                     : "border-gray-3"
-                } w-[154px] bg-littleDark h-16 rounded-xl border-[1px] flex items-center justify-center cursor-pointer`}
+                }  tablet:w-[154px] bg-littleDark h-16 rounded-xl border-[1px] flex items-center justify-center cursor-pointer`}
                 onClick={() => setTheme("littleDark")}
               >
                 <div className="flex gap-2">
@@ -199,7 +200,7 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
                     : resolvedTheme === "dark" && color === "pink"
                     ? "border-pinkBg"
                     : "border-gray-3"
-                } w-[154px] bg-superDark h-16 rounded-xl border-[1px] flex items-center justify-center cursor-pointer`}
+                }  tablet:w-[154px] bg-superDark h-16 rounded-xl border-[1px] flex items-center justify-center cursor-pointer`}
                 onClick={() => setTheme("dark")}
               >
                 <div className="flex gap-2">
