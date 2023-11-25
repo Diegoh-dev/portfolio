@@ -14,7 +14,15 @@ import { useContext, useEffect, useState } from "react"
 import { ControllerContext } from "@/context/ControlleContext"
 export function MenuTabs() {
   const { theme, setTheme ,resolvedTheme} = useTheme();
-
+  function shareContent(){
+    console.log('fui chamada')
+    if(navigator.share){
+      navigator.share({
+        url:'https://www.linkedin.com/in/diego-costa-dev/',
+        title:'Linkedin do Diego'
+      })
+    }
+  }
   const [mounted,setMounted] = useState(false);
 
   const {color} = useContext(ControllerContext);
@@ -68,7 +76,9 @@ export function MenuTabs() {
                 <Post.PostIcon Icon={BarChart2}>
                   <Post.Amount amount={1000} />
                 </Post.PostIcon>
-                <Post.PostIcon Icon={Share2}></Post.PostIcon>
+                <Post.PostIcon Icon={Share2} onClick={()=> {
+                  shareContent()
+                }}></Post.PostIcon>
               </Post.FooterRoot>
             </Post.PostSection>
           </Post.Root>
@@ -89,7 +99,7 @@ export function MenuTabs() {
                 <Post.PostIcon Icon={BarChart2}>
                   <Post.Amount amount={1000} />
                 </Post.PostIcon>
-                <Post.PostIcon Icon={Share2}>
+                <Post.PostIcon Icon={Share2} onClick={()=> shareContent()}>
                   
                 </Post.PostIcon>
               </Post.FooterRoot>
@@ -112,7 +122,7 @@ export function MenuTabs() {
                 <Post.PostIcon Icon={BarChart2}>
                   <Post.Amount amount={1000} />
                 </Post.PostIcon>
-                <Post.PostIcon Icon={Share2}></Post.PostIcon>
+                <Post.PostIcon Icon={Share2} onClick={()=> shareContent()}></Post.PostIcon>
               </Post.FooterRoot>
             </Post.PostSection>
           </Post.Root>

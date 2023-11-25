@@ -4,6 +4,15 @@ import { BarChart2, Heart, MessageCircle, Share2 } from "lucide-react";
 import { toast } from "react-toastify";
 
 export default function Projetos(){
+  //transformar em hook
+  function shareContent(){
+    if(navigator.share){
+      navigator.share({
+        url:'https://www.linkedin.com/in/diego-costa-dev/',
+        title:'Linkedin do Diego'
+      })
+    }
+  }
     return (
         //mt-9 fazer o calc
         <div className=" overflow-auto flex-col tablet:flex tablet:w-2/3 laptop:w-3/4 h-screen ">
@@ -29,7 +38,7 @@ export default function Projetos(){
                 }}>
                   <Post.Amount />
                 </Post.PostIcon>
-                <Post.PostIcon Icon={Share2}></Post.PostIcon>
+                <Post.PostIcon Icon={Share2} ></Post.PostIcon>
               </Post.FooterRoot>
             </Post.PostSection>
           </Post.Root>
@@ -50,7 +59,9 @@ export default function Projetos(){
                 <Post.PostIcon Icon={BarChart2}>
                   <Post.Amount  />
                 </Post.PostIcon>
-                <Post.PostIcon Icon={Share2}>
+                <Post.PostIcon Icon={Share2} onClick={()=> {
+                  shareContent()
+                }}>
                   
                 </Post.PostIcon>
               </Post.FooterRoot>
@@ -73,7 +84,9 @@ export default function Projetos(){
                 <Post.PostIcon Icon={BarChart2}>
                   <Post.Amount  />
                 </Post.PostIcon>
-                <Post.PostIcon Icon={Share2}></Post.PostIcon>
+                <Post.PostIcon Icon={Share2} onClick={()=> {
+                  shareContent()
+                }}></Post.PostIcon>
               </Post.FooterRoot>
             </Post.PostSection>
           </Post.Root>
