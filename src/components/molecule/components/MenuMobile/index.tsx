@@ -7,6 +7,7 @@ import { useContext, useState } from "react";
 import { useTheme } from "next-themes";
 import { SwitchComponent } from "@/components/atoms/switchComponent";
 import { Modal } from "../Modal/modal";
+import { useRouter } from "next/navigation";
 interface MenuMobileProps { }
 
 export function MenuMobile() {
@@ -18,6 +19,8 @@ export function MenuMobile() {
 
   const [openModal, setOpenModal] = useState(false);
 
+  const router = useRouter();
+
 
   return (
     <>
@@ -28,42 +31,41 @@ export function MenuMobile() {
         : resolvedTheme === "littleDark"
           ? "bg-littleDark"
           : "bg-light"
-      }  absolute z-10  w-9/12	h-full p-4`}>
-        <header className="flex gap-4">
-          <button onClick={() => setOpenMenuMobile(false)}>
-            <IconPerson color="var(--color-purple)" height="40" width="40" />
-          </button>
+      } sm:w-full tablet:[4.688rem] h-full p-4 rounded-t-lg
 
-          <div>
-            <strong>Diego Ribeiro</strong>
-            <span className="block">Desenvolvedor Front-End</span>
-          </div>
-        </header>
+      `}>
+        {/* <header className="flex gap-4">
+       
+             <Image
+              src={LogoLetraWhite}
+              width={40}
+              height={40}
+              alt="Logo letra"
+              loading="lazy"
+            />
+        </header> */}
 
-        <section className="flex justify-around pb-10 pt-8	border-b-[1px] border-borderLight dark:border-gray mb-8">
-          <span>500 Curtidas</span>
-          <span>5000 Visualizações</span>
-        </section>
+   
         {/* h-[calc(100%-450px)] */}
-        <section className="flex flex-col gap-12 h-[calc(100%-200px)]">
-          <button className="flex gap-4 items-center">
-            <User color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)" : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `} /> Perfil
+        <section className="flex tablet:flex-col tablet:gap-4 justify-between h-[calc(100%-200px)] ">
+          <button className="flex gap-4 items-center" onClick={() =>  router.push('/')}>
+            <User color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)" : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `} /> 
           </button>
-          <button className="flex gap-4 items-center">
-            <Settings color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)" : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `} /> Habilidades
+          <button className="flex gap-4 items-center"  onClick={() =>  router.push('/dashboard')}>
+            <Settings color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)" : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `} /> 
           </button>
-          <button className="flex gap-4 items-center">
-            <Code2 color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)" : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `} /> Projetos
+          <button className="flex gap-4 items-center" onClick={() =>  router.push('/habilidades')}>
+            <Code2 color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)" : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `} /> 
           </button>
-          <button className="flex gap-4 items-center">
-            <Contact color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)" : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `} /> Contatos
+          <button className="flex gap-4 items-center"  onClick={() =>  router.push('/projetos')}>
+            <Contact color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)" : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `} /> 
           </button>
 
           <button className="flex gap-4 items-center" onClick={() => {
             setOpenModal(true);
             // setOpenMenuMobile(true);
           }}>
-            <PlusCircle color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)"  : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `} /> Configurações
+            <PlusCircle color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)"  : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `} /> 
           </button>
         </section>
 
@@ -81,15 +83,7 @@ export function MenuMobile() {
             }}
           /> */}
 
-          <div >
-            <Image
-              src={LogoLetraWhite}
-              width={40}
-              height={40}
-              alt="Logo letra"
-              loading="lazy"
-            />
-          </div>
+         
         </footer>
       </main>
     </>
