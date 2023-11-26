@@ -3,79 +3,95 @@ import { ChevronDown, Code2, Contact, Moon, PlusCircle, Settings, Sun, User } fr
 import LogoLetraWhite from '../../../../../public/assets/logoLetraWhite.png';
 import Image from "next/image";
 import { ControllerContext } from "@/context/ControlleContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useTheme } from "next-themes";
 import { SwitchComponent } from "@/components/atoms/switchComponent";
-interface MenuMobileProps {}
+import { Modal } from "../Modal/modal";
+interface MenuMobileProps { }
 
 export function MenuMobile() {
-  const {openMenuMobile,setOpenMenuMobile} = useContext(ControllerContext);
-  // const { resolvedTheme } = useTheme();
-//${resolvedTheme === 'dark' ? 'bg-dark' : 'bg-light'}
-const { theme, setTheme } = useTheme();
+  const { openMenuMobile, setOpenMenuMobile } = useContext(ControllerContext);
+
+  const { theme, setTheme, resolvedTheme } = useTheme();
+
+  const { color } = useContext(ControllerContext)
+
+  const [openModal, setOpenModal] = useState(false);
 
 
   return (
-    <main className={`absolute z-10 bg-light dark:bg-dark w-9/12	h-full p-4`}>
-      <header className="flex gap-4">
-        <button onClick={() => setOpenMenuMobile(false)}>
-          <IconPerson color="var(--color-purple)" height="40" width="40" />
-        </button>
+    <>
+      {openModal && (<Modal openModal={openModal} setOpenModal={setOpenModal} />)}
+      <main
+        className={`${resolvedTheme === "dark"
+        ? "bg-dark"
+        : resolvedTheme === "littleDark"
+          ? "bg-littleDark"
+          : "bg-light"
+      }  absolute z-10  w-9/12	h-full p-4`}>
+        <header className="flex gap-4">
+          <button onClick={() => setOpenMenuMobile(false)}>
+            <IconPerson color="var(--color-purple)" height="40" width="40" />
+          </button>
 
-        <div>
-          <strong>Diego Ribeiro</strong>
-          <span className="block">Desenvolvedor Front-End</span>
-        </div>
-      </header>
+          <div>
+            <strong>Diego Ribeiro</strong>
+            <span className="block">Desenvolvedor Front-End</span>
+          </div>
+        </header>
 
-      <section className="flex justify-around pb-10 pt-8	border-b-[1px] border-borderLight dark:border-gray mb-8">
-        <span>500 Curtidas</span>
-        <span>5000 Visualizações</span>
-      </section>
-      {/* h-[calc(100%-450px)] */}
-      <section className="flex flex-col gap-12 h-[calc(100%-200px)]">
-        <button className="flex gap-4 items-center">
-          <User color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Perfil
-        </button>
-        <button className="flex gap-4 items-center">
-          <Settings color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Habilidades
-        </button>
-        <button className="flex gap-4 items-center">
-          <Code2 color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Projetos
-        </button>
-        <button className="flex gap-4 items-center">
-          <Contact color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Contatos
-        </button>
+        <section className="flex justify-around pb-10 pt-8	border-b-[1px] border-borderLight dark:border-gray mb-8">
+          <span>500 Curtidas</span>
+          <span>5000 Visualizações</span>
+        </section>
+        {/* h-[calc(100%-450px)] */}
+        <section className="flex flex-col gap-12 h-[calc(100%-200px)]">
+          <button className="flex gap-4 items-center">
+            <User color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)" : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `} /> Perfil
+          </button>
+          <button className="flex gap-4 items-center">
+            <Settings color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)" : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `} /> Habilidades
+          </button>
+          <button className="flex gap-4 items-center">
+            <Code2 color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)" : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `} /> Projetos
+          </button>
+          <button className="flex gap-4 items-center">
+            <Contact color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)" : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `} /> Contatos
+          </button>
 
-        <button className="flex gap-4 items-center">
-          <PlusCircle color={`${theme === "light" ? "var(--color-blue)" : "var(--color-purple)"}`}/> Configurações
-        </button>
-      </section>
+          <button className="flex gap-4 items-center" onClick={() => {
+            setOpenModal(true);
+            // setOpenMenuMobile(true);
+          }}>
+            <PlusCircle color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)"  : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `} /> Configurações
+          </button>
+        </section>
 
-      <footer className="flex justify-around mb-0">
+        <footer className="flex justify-around mb-0">
 
 
-     <SwitchComponent 
-    onCheckedChange={(checked) => {
-      //melhorar essa logica
-      // checked ? setTheme('dark') :  setTheme('light')
-      console.log({checked})
-      theme === 'dark' ? setTheme('light') : setTheme('dark')
-    
+          {/* <SwitchComponent
+            onCheckedChange={(checked) => {
+              //melhorar essa logica
+              // checked ? setTheme('dark') :  setTheme('light')
+              console.log({ checked })
+              theme === 'dark' ? setTheme('light') : setTheme('dark')
 
-    }}
-     />
 
-       <div >
-       <Image
-          src={LogoLetraWhite}
-          width={40}
-          height={40}
-          alt="Logo letra"
-          loading="lazy"
-        />
-       </div>
-      </footer>
-    </main>
+            }}
+          /> */}
+
+          <div >
+            <Image
+              src={LogoLetraWhite}
+              width={40}
+              height={40}
+              alt="Logo letra"
+              loading="lazy"
+            />
+          </div>
+        </footer>
+      </main>
+    </>
   )
 }

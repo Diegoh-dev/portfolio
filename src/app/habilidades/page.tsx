@@ -1,4 +1,5 @@
 'use client'
+import { FooterComponent } from "@/components/molecule/components/Footer/footer";
 import { Post } from "@/components/molecule/components/Post/post";
 import { BarChart2, Heart, MessageCircle, Share2 } from "lucide-react";
 
@@ -70,6 +71,8 @@ export default function Habilidades(){
               </Post.FooterRoot>
             </Post.PostSection>
           </Post.Root>
+
+          <FooterComponent/>
         </div>
     )
 }
