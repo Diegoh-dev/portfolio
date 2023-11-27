@@ -31,11 +31,9 @@ export function MenuMobile() {
         : resolvedTheme === "littleDark"
           ? "bg-littleDark"
           : "bg-light"
-      } sm:w-full tablet:[4.688rem] h-full p-4 rounded-t-lg
+      } sm:w-full tablet:[4.688rem] h-full p-4 rounded-t-lg tablet:w-20	 flex tablet:flex-col items-center`}>
 
-      `}>
-        {/* <header className="flex gap-4">
-       
+        <header className=" hidden tablet:flex gap-4 mb-8  tablet:visible">
              <Image
               src={LogoLetraWhite}
               width={40}
@@ -43,11 +41,12 @@ export function MenuMobile() {
               alt="Logo letra"
               loading="lazy"
             />
-        </header> */}
+        </header>
 
    
         {/* h-[calc(100%-450px)] */}
-        <section className="flex tablet:flex-col tablet:gap-4 justify-between h-[calc(100%-200px)] ">
+        <section 
+        className="flex tablet:flex-col justify-between desktop:gap-12  tablet:gap-12 laptop:gap-12 h-[calc(100%-200px)] w-full">
           <button className="flex gap-4 items-center" onClick={() =>  router.push('/')}>
             <User color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)" : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `} /> 
           </button>

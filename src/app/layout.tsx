@@ -83,10 +83,10 @@ export default function RootLayout({
       <body className="w-screen	h-screen overflow-hidden	flex">
         <Providers>
           {/* tablet:w-1/3*/}
-          <div className="hidden tablet:hidden laptop:w-1/4 sm:block">
+          <div className="hidden tablet:w-1/4 laptop:sm:block">
             <MenuDesktop />
           </div>
-          <div className="laptop:hidden tablet:static absolute  z-10 bottom-0 tablet:[4.688rem] w-full">
+          <div className=" tablet:hidden tablet:static absolute  z-10 bottom-0 tablet:[4.688rem] tablet:w-20	 w-full">
             <MenuMobile />
           </div>
           {children}
