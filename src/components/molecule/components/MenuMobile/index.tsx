@@ -31,9 +31,9 @@ export function MenuMobile() {
         : resolvedTheme === "littleDark"
           ? "bg-littleDark"
           : "bg-light"
-      } sm:w-full tablet:[4.688rem] h-full p-4 rounded-t-lg tablet:w-20	 flex tablet:flex-col items-center`}>
+      } flex sm:w-full tablet:[4.688rem] h-full p-4 rounded-t-lg tablet:w-20  tablet:flex-col laptop:flex-col items-center sm:border-t-[1px] ${resolvedTheme === 'light' ? 'border-borderLight' : resolvedTheme === 'littleDark' ? 'border-border-littleDark' : 'border-border-black'}	`}>
 
-        <header className=" hidden tablet:flex gap-4 mb-8  tablet:visible">
+        <header className=" hidden tablet:flex gap-4 mb-8  tablet:visible laptop:visible laptop:flex">
              <Image
               src={LogoLetraWhite}
               width={40}
@@ -46,7 +46,7 @@ export function MenuMobile() {
    
         {/* h-[calc(100%-450px)] */}
         <section 
-        className="flex tablet:flex-col justify-between desktop:gap-12  tablet:gap-12 laptop:gap-12 h-[calc(100%-200px)] w-full">
+        className="flex tablet:flex-col laptop:flex-col tablet:items-center laptop:items-center sm:justify-between desktop:gap-12  tablet:gap-12 laptop:gap-12 h-[calc(100%-200px)] w-full">
           <button className="flex gap-4 items-center" onClick={() =>  router.push('/')}>
             <User color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)" : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `} /> 
           </button>
