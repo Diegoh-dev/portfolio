@@ -15,7 +15,7 @@ export default function Projetos(){
   }
     return (
         //mt-9 fazer o calc
-        <div className=" overflow-auto flex-col tablet:flex tablet:w-2/3 laptop:w-3/4 h-screen ">
+        <div className=" overflow-auto flex-col tablet:flex tablet:w-2/3 laptop:w-3/4 sm:h-[calc(100dvh-57px)] h-screen">
           <Post.Root>
             <Post.Header />
             <Post.PostSection>

@@ -27,7 +27,7 @@ export default function Dashboard() {
   return (
     <>
       
-      <div className="tablet:flex tablet:w-full	 laptop:w-3/4 h-screen	">
+      <div className="tablet:flex tablet:w-full	 laptop:w-3/4 sm:h-[calc(100dvh-57px)] h-screen	">
         {/* <div className="tablet:hidden">{openMenuMobile && <MenuMobile />}</div> */}
 
         {/* <div className="hidden tablet:w-1/3	laptop:w-1/4 sm:block">

@@ -33,6 +33,8 @@ export default function Home() {
   //     }
   // document.addEventListener('scroll', rolar);
 
+  console.log(window.scrollY)
+
   if(!mounted){
     return null;
   }
@@ -40,7 +42,7 @@ export default function Home() {
 
   return (
     // max-w-full 
-    <main className="tablet:w-full laptop:w-[77%]	desktop:w-[77%] 2xl:w-[77%]  h-screen relative overflow-auto	">
+    <main className="tablet:w-full laptop:w-[77%]	desktop:w-[77%] 2xl:w-[77%] sm:h-[calc(100dvh-57px)] h-screen   relative overflow-auto	">
       <section className="max-w-full h-[37.333333%] relative">
         {/* h-2/6 */}
         <Image
