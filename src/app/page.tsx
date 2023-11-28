@@ -18,9 +18,25 @@ export default function Home() {
     setMounted(true);
   },[]);
 
+  // var ultimaPosicao = 0;
+
+  // function rolar() {
+  //         var atualPosicao = window.scrollY;
+  
+  //         if(atualPosicao > ultimaPosicao) {
+  //             console.log('↓↓↓')
+  //         } else {
+  //             console.log('↑↑↑');
+  //         }
+  
+  //         ultimaPosicao = atualPosicao;
+  //     }
+  // document.addEventListener('scroll', rolar);
+
   if(!mounted){
     return null;
   }
+
 
   return (
     // max-w-full 
