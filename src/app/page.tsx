@@ -51,9 +51,10 @@ export default function Home() {
           alt="capa perfil"
           loading="lazy"
           fill={true}
-          objectFit="cover"
+          // objectFit="cover"
+          // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          quality={100}
         />
-        portfolio
       </section>
 
       {/* foto de perfil */}
