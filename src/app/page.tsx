@@ -8,6 +8,7 @@ import { GraduationCap, PartyPopper, User2 } from "lucide-react";
 import { IconUser } from "@/components/atoms/iconComponents/iconUser";
 import LogoLetraWhite from '../../public/assets/logoLetraWhite.png';
 import { ControllerContext } from "@/context/ControlleContext";
+import { FooterComponent } from "@/components/molecule/components/Footer/footer";
 
 export default function Home() {
   const [mounted,setMounted] = useState(false);
@@ -42,6 +43,7 @@ export default function Home() {
 
   return (
     // max-w-full 
+    <>
     <main className="tablet:w-full laptop:w-[77%]	desktop:w-[77%] 2xl:w-[77%] sm:h-[calc(100dvh-57px)] h-screen   relative overflow-auto	">
       <section className="max-w-full h-[37.333333%] relative">
         {/* h-2/6 */}
@@ -105,7 +107,7 @@ export default function Home() {
           </span>
       </section>
 
-      <section className="p-8">
+      <section className="py-[.5rem] px-8	">
         <p className="font-exo tracking-wider">
           Desenvolvedor Front-end com experiência em React.js, Next.js, Redux,
           JavaScript, TypeScript, Styled Components, Material UI e consumo de
@@ -125,6 +127,11 @@ export default function Home() {
           loading="lazy"
         />
       </footer> */}
+    <FooterComponent/>
+
     </main>
+
+
+    </>
   )
 }

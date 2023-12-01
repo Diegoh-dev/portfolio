@@ -11,7 +11,7 @@ export function FooterComponent(){
     const {color} = useContext(ControllerContext);
 
     return (
-      <footer className="flex items-center flex-col h-64 p-5">
+      <footer className="flex items-center flex-col h-32 p-[.3rem]">
         <div className="pb-4 w-full flex items-center flex-col ">
           <h3 className="text-xl">VAMOS CONSTRUIR ALGO JUNTOS?</h3>
           <p>
