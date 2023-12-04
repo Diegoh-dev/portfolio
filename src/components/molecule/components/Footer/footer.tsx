@@ -15,7 +15,7 @@ export function FooterComponent() {
       <div className="pb-4 w-full flex items-center flex-col ">
         <h3 className="text-xl">VAMOS CONSTRUIR ALGO JUNTOS?</h3>
         <p>
-          Se você tem algum projeto em mente, sinta-se à vontade para me enviar
+          Se você tem algum projeto ou proposta em mente, sinta-se à vontade para enviar-me
           uma mensagem.
         </p>
       </div>
