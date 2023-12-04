@@ -61,7 +61,7 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
                 }}
                 className="w-10 bg-blue h-10 rounded-full cursor-pointer flex justify-center items-center"
               >
-                {color === "blue" && <Check />}
+                {color === "blue" && <Check color="#FFF"/>}
               </div>
 
               <div
@@ -71,7 +71,7 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
                 }}
                 className="w-10 bg-purple h-10 rounded-full cursor-pointer flex justify-center items-center "
               >
-                {color === "purple" && <Check />}
+                {color === "purple" && <Check color="#FFF"/>}
               </div>
 
               <div
@@ -81,7 +81,7 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
                 }}
                 className="w-10 bg-yellowBg h-10 rounded-full cursor-pointer flex justify-center items-center "
               >
-                {color === "yellow" && <Check />}
+                {color === "yellow" && <Check color="#FFF"/>}
               </div>
 
               <div
@@ -91,7 +91,7 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
                 }}
                 className="w-10 bg-orangeBg h-10 rounded-full cursor-pointer flex justify-center items-center "
               >
-                {color === "orange" && <Check />}
+                {color === "orange" && <Check color="#FFF"/>}
               </div>
 
               <div
@@ -101,7 +101,7 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
                 }}
                 className="w-10 bg-greenBg h-10 rounded-full cursor-pointer flex justify-center items-center "
               >
-                {color === "green" && <Check />}
+                {color === "green" && <Check color="#FFF"/>}
               </div>
 
               <div
@@ -111,7 +111,7 @@ export function Modal({ openModal, setOpenModal }: ModalProps) {
                 }}
                 className="w-10 bg-pinkBg h-10 rounded-full cursor-pointer flex justify-center items-center "
               >
-                {color === "pink" && <Check />}
+                {color === "pink" && <Check color="#FFF"/>}
               </div>
 
             </div>
