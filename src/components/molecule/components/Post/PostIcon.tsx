@@ -28,9 +28,7 @@ export function PostIcon({Icon,children,...rest}:PostIconProps){
 
     return (
         <button 
-        className="flex gap-1 cursor-pointer" onClick={()=>{
-          toast.success("teste!");
-        }}
+        className="flex gap-1 cursor-pointer" 
        {...rest}
         >
           <Icon size={18.75} color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)"  : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `}/>
