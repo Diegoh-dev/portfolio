@@ -1,13 +1,12 @@
-export function PostContent(){
+interface PostContentProps{
+  texto?:string;
+}
+
+export function PostContent({texto = 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem'}:PostContentProps){
     return(
         <article>
         <p>
-          lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-          lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-          lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-          lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-          lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-          lorem lorem lorem.
+          {texto}
         </p>
       </article>
     )

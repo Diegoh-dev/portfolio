@@ -3,6 +3,9 @@ import { FooterComponent } from "@/components/molecule/components/Footer/footer"
 import { Post } from "@/components/molecule/components/Post/post";
 import { BarChart2, Heart, MessageCircle, Share2 } from "lucide-react";
 import { toast } from "react-toastify";
+import postImage from '../../../public/assets/capa.png';
+import capaVolvo from '../../../public/assets/ProductList-Desktop.png'
+import capaCapsulaDoTempo from '../../../public/assets/Memories.png'
 
 export default function Habilidades(){
     return (
@@ -13,7 +16,7 @@ export default function Habilidades(){
             <Post.PostSection>
               <Post.SectionHeader />
               <Post.Content />
-              <Post.PostImage />
+              <Post.PostImage src={postImage} href={"https://github.com/Diegoh-dev/volvo-teste" || ''}/>
               <Post.FooterRoot>
                 <Post.PostIcon Icon={MessageCircle} onClick={()=> {
                   toast.warn('Em breve, você poderá comentar nesse post')
@@ -34,12 +37,13 @@ export default function Habilidades(){
               </Post.FooterRoot>
             </Post.PostSection>
           </Post.Root>
+
           <Post.Root>
             <Post.Header />
             <Post.PostSection>
               <Post.SectionHeader />
               <Post.Content />
-              <Post.PostImage />
+              <Post.PostImage src={capaVolvo} href={"https://github.com/Diegoh-dev/volvo-teste" || ''}/>
               <Post.FooterRoot>
                 <Post.PostIcon Icon={MessageCircle} onClick={()=> {
                   toast.warn('Em breve, você poderá comentar nesse post')
@@ -60,32 +64,8 @@ export default function Habilidades(){
               </Post.FooterRoot>
             </Post.PostSection>
           </Post.Root>
-          <Post.Root>
-            <Post.Header />
-            <Post.PostSection>
-              <Post.SectionHeader />
-              <Post.Content />
-              <Post.PostImage />
-              <Post.FooterRoot>
-                <Post.PostIcon Icon={MessageCircle} onClick={()=> {
-                  toast.warn('Em breve, você poderá comentar nesse post')
-                }}>
-                  <Post.Amount amount={150} />
-                </Post.PostIcon>
-                <Post.PostIcon Icon={Heart} onClick={()=> {
-                  toast.warn('Em breve, você poderá curtir esse post')
-                }}>
-                  <Post.Amount amount={500} />
-                </Post.PostIcon>
-                <Post.PostIcon Icon={BarChart2} onClick={()=> {
-                  toast.warn('Em breve, total de visualizações')
-                }}>
-                  <Post.Amount amount={1000} />
-                </Post.PostIcon>
-                <Post.PostIcon Icon={Share2}></Post.PostIcon>
-              </Post.FooterRoot>
-            </Post.PostSection>
-          </Post.Root>
+
+      
 
       
 

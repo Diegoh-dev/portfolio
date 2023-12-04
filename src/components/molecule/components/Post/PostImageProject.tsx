@@ -1,12 +1,18 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
-import postImage from '../../../../../public/assets/capa.png'
+interface PostImageProjectProps {
+  src: StaticImageData;
+  href:string;
+}
 
-export function PostImageProject(){
-    return (
-        <section className="relative  max-h-96 mt-2 min-h-fit h-72 overflow-hidden rounded-2xl">
+export function PostImageProject({ src,href }: PostImageProjectProps) {
+  console.log({href})
+  return (
+    <section className="relative  max-h-96 mt-2 min-h-fit h-72 overflow-hidden rounded-2xl">
+      <Link href={href ? href : ''} target="_blank">
         <Image
-          src={postImage}
+          src={src}
           // width={100}
           // height={100}
           alt="capa projeto"
@@ -14,6 +20,7 @@ export function PostImageProject(){
           fill={true}
           objectFit="cover"
         />
-      </section>
-    )
+      </Link>
+    </section>
+  );
 }
