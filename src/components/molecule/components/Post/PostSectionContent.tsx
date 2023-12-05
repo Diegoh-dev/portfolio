@@ -6,7 +6,7 @@ interface PostSectionContentProps{
 
 export function PostSectionContent({children}:PostSectionContentProps){
     return (
-        <section>
+        <section className="w-full">
             {children}
         </section>
     )
