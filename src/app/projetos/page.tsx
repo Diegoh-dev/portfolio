@@ -5,6 +5,8 @@ import { toast } from "react-toastify";
 import postImage from '../../../public/assets/capa.png';
 import capaVolvo from '../../../public/assets/ProductList-Desktop.png';
 import capaCapsulaDoTempo from '../../../public/assets/Memories.png';
+import capaPortifolio from '../../../public/assets/portifolioNovo.png';
+import { FooterComponent } from "@/components/molecule/components/Footer/footer";
 
 export default function Projetos(){
   //transformar em hook
@@ -24,7 +26,7 @@ export default function Projetos(){
             <Post.PostSection>
               <Post.SectionHeader />
               <Post.Content />
-              <Post.PostImage src={postImage} href={"https://github.com/Diegoh-dev/volvo-teste" || ''}/>
+              <Post.PostImage src={capaPortifolio} href={"https://github.com/Diegoh-dev/portfolio" || ''}/>
               <Post.FooterRoot>
                 <Post.PostIcon Icon={MessageCircle} onClick={()=> {
                   toast.warn('Em breve, você poderá comentar nesse post')
@@ -73,11 +75,13 @@ export default function Projetos(){
               </Post.FooterRoot>
             </Post.PostSection>
           </Post.Root>
+
           <Post.Root>
             <Post.Header />
             <Post.PostSection>
               <Post.SectionHeader />
-              <Post.Content />
+              <Post.Content texto="Desafio Volvo: No âmbito deste desafio, explorei minhas habilidades na construção de um projeto inovador totalmente desenvolvido em Next.js 13 e alimentado por Typescript. Minha abordagem para esse desafio envolveu a aplicação rigorosa do conceito de componentização do React, visando eliminar redundâncias de código e promover uma arquitetura eficiente.
+                A estrutura do projeto foi planejada para oferecer páginas dinâmicas que proporcionam uma experiência envolvente, permitindo a visualização detalhada de cada carro e simplificando o processo de compra. Ao enfrentar esse desafio, busquei não apenas atender às expectativas, mas superá-las, demonstrando minha paixão pelo desenvolvimento front-end e minha capacidade de criar soluções que transcendem o comum. Este projeto não é apenas um exemplo de minhas habilidades técnicas, mas também reflete meu compromisso em proporcionar experiências cativantes aos usuários. Clique na imagem para ser redirecionado para o repositório dessa aplicação. 🤗😎"/>
               <Post.PostImage src={capaVolvo} href={"https://github.com/Diegoh-dev/volvo-teste" || ''}/>
               <Post.FooterRoot>
                 <Post.PostIcon Icon={MessageCircle} onClick={()=> {
@@ -99,6 +103,8 @@ export default function Projetos(){
               </Post.FooterRoot>
             </Post.PostSection>
           </Post.Root>
+
+          <FooterComponent/>
         </div>
     )
 }

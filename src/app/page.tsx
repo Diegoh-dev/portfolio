@@ -109,12 +109,9 @@ export default function Home() {
 
       <section className="py-[.5rem] px-8	">
         <p className="font-exo tracking-wider">
-          Desenvolvedor Front-end com experiência em React.js, Next.js, Redux,
-          JavaScript, TypeScript, Styled Components, Material UI e consumo de
-          APIs REST. Apaixonado pelo desenvolvimento de componentes
-          reutilizáveis. Também possui experiência em projetos gerenciados por
-          Metodologias Ágeis. Formado em Sistemas de Informação e cursando
-          Especialização em Front-End na Digital House Brasil.
+        Sou um desenvolvedor front-end com mais de dois anos de experiência na criação de software. Atualmente, tenho a satisfação de atuar no desenvolvimento de sistemas complexos voltados para clínicas, hospitais e ambulatórios, onde tenho trabalhado com dedicação e paixão. Além disso, tenho conhecimento em React Native, o que me permite abranger tanto o desenvolvimento de aplicativos para web quanto para dispositivos móveis.
+          <br/>
+
         </p>
       </section>
 

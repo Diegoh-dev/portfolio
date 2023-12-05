@@ -9,7 +9,7 @@ interface PostImageProjectProps {
 export function PostImageProject({ src,href }: PostImageProjectProps) {
   console.log({href})
   return (
-    <section className="relative  max-h-96 mt-2 min-h-fit h-72 overflow-hidden rounded-2xl">
+    <section className="relative  max-h-[26rem] mt-2 min-h-fit h-[26rem] overflow-hidden rounded-2xl">
       <Link href={href ? href : ''} target="_blank">
         <Image
           src={src}
