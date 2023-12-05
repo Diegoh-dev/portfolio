@@ -18,7 +18,7 @@ export default function Projetos(){
   }
     return (
         //mt-9 fazer o calc
-        <div className=" overflow-auto flex-col tablet:flex tablet:w-2/3 laptop:w-3/4 sm:h-[calc(100dvh-57px)] h-screen">
+        <div className=" overflow-auto w-full flex-col tablet:flex tablet:w-2/3 laptop:w-3/4 sm:h-[calc(100dvh-57px)] h-screen">
            <Post.Root>
             <Post.Header />
             <Post.PostSection>
@@ -50,7 +50,8 @@ export default function Projetos(){
             <Post.Header />
             <Post.PostSection>
               <Post.SectionHeader />
-              <Post.Content texto="Projeto realizado na NLW da Rocketseat, onde foi usado algumas das tecnologias tendência do mercado.Projeto realizado na NLW da Rocketseat, onde foi usado algumas das tecnologias tendência do mercado. Projeto realizado na NLW da Rocketseat, onde foi usado algumas das tecnologias tendência do mercado. Projeto realizado na NLW da Rocketseat, onde foi usado algumas das tecnologias tendência do mercado. Projeto realizado na NLW da Rocketseat, onde foi usado algumas das tecnologias tendência do mercado. Projeto realizado na NLW da Rocketseat, onde foi usado algumas das tecnologias tendência do mercado.  "/>
+              <Post.Content texto="Projeto realizado na NLW da Rocketseat, onde foi usado algumas das tecnologias tendências do mercado. A ideia do projeto é construir uma aplicação onde o usuário pudesse compartilhar momentos importante da sua vida, além disso, poder compartilhar com o mundo esse momento. Esse projeto foi feito utilizando as seguintes tecnologias: Next, Tailwind, React native com expo, Nodejs, Fastify, Typescript, entre outras. Clique na imagem para ser redirecionado para o repositório dessa aplicação 🤗😎.
+              "/>
               <Post.PostImage src={capaCapsulaDoTempo} href={"https://github.com/Diegoh-dev/spacetime" || ''}/>
               <Post.FooterRoot>
                 <Post.PostIcon Icon={MessageCircle} onClick={()=> {
