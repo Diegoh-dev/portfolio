@@ -6,17 +6,19 @@ import { toast } from "react-toastify";
 import postImage from '../../../public/assets/capa.png';
 import capaVolvo from '../../../public/assets/ProductList-Desktop.png'
 import capaCapsulaDoTempo from '../../../public/assets/Memories.png'
+import javascript from '../../../public/assets/javascript.png'
+import next from '../../../public/assets/next.png'
 
 export default function Habilidades(){
     return (
         //mt-9 fazer o calc
-        <div className=" overflow-auto flex-col tablet:flex tablet:w-2/3 laptop:w-3/4 sm:h-[calc(100dvh-57px)] h-screen ">
+        <div className=" w-full overflow-auto flex-col tablet:flex tablet:w-2/3 laptop:w-3/4 sm:h-[calc(100dvh-57px)] h-screen ">
           <Post.Root>
             <Post.Header />
             <Post.PostSection>
               <Post.SectionHeader />
               <Post.Content />
-              <Post.PostImage src={postImage} href={"https://github.com/Diegoh-dev/volvo-teste" || ''}/>
+              <Post.PostImage src={javascript} href={"https://github.com/Diegoh-dev/volvo-teste" || ''}/>
               <Post.FooterRoot>
                 <Post.PostIcon Icon={MessageCircle} onClick={()=> {
                   toast.warn('Em breve, você poderá comentar nesse post')
@@ -43,7 +45,7 @@ export default function Habilidades(){
             <Post.PostSection>
               <Post.SectionHeader />
               <Post.Content />
-              <Post.PostImage src={capaVolvo} href={"https://github.com/Diegoh-dev/volvo-teste" || ''}/>
+              <Post.PostImage src={next} href={"" || ''}/>
               <Post.FooterRoot>
                 <Post.PostIcon Icon={MessageCircle} onClick={()=> {
                   toast.warn('Em breve, você poderá comentar nesse post')
