@@ -25,7 +25,8 @@ export default function Projetos(){
             <Post.Header />
             <Post.PostSection>
               <Post.SectionHeader />
-              <Post.Content />
+              <Post.Content texto="Projeto desse portfólio, a intenção era fazer um projeto diferente da maioria dos portfólio que existe hoje na web. Eu quis trazer uma ideia parecida com twitter, onde o usuário vai poder curtir, comentar , ver o total de visualização de cada projeto e poder compartilhar caso ele ache o projeto interessante. Essas funcionalidades estão em desenvolvimento exceto a de compartilhamento. As tecnologias usadas nesse projeto: Next 13, Tailwind, Radix, Typescript, Jest e muito mais.  Clique na imagem para ser redirecionado para o repositório dessa aplicação 🤗😎.
+              "/>
               <Post.PostImage src={capaPortifolio} href={"https://github.com/Diegoh-dev/portfolio" || ''}/>
               <Post.FooterRoot>
                 <Post.PostIcon Icon={MessageCircle} onClick={()=> {

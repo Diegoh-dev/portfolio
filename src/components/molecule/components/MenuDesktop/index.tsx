@@ -5,7 +5,7 @@ import logoPrincipal from '../../../../../public/assets/LOGO PRINCIPAL.png';
 import LogoLetraWhite from '../../../../../public/assets/logoLetraWhite.png';
 import LogoLetra from '../../../../../public/assets/logoLetra.png';
 
-import { Code2, Contact, LayoutDashboard, PlusCircle, Settings, User } from "lucide-react";
+import { Briefcase, Code2, Contact, LayoutDashboard, PlusCircle, Settings, User } from "lucide-react";
 import { SwitchComponent } from "@/components/atoms/switchComponent";
 import {useRouter} from 'next/navigation';
 import { Modal } from "../Modal/modal";
@@ -52,7 +52,7 @@ export function MenuDesktop(){
           toast.success("teste!");
         }}
         className={`${resolvedTheme === 'light' ? 'hover:bg-hoverLight' : resolvedTheme === 'littleDark' ? 'hover:bg-hoverDark-2' : 'hover:bg-hoverDark'} p-3 flex gap-4 items-center  hover:rounded-full  active:font-bold focus:font-bold`} >
-          <Contact color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)"  : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `}/> Contatos
+          <Briefcase color={`${color === "blue" ? "var(--color-blue)" : color === 'purple' ? "var(--color-purple)"  : color === 'yellow' ? "var(--color-yellow)" : color === 'orange' ? "var(--color-orange)" : color === 'green' ? "var(--color-green)" : "var(--color-pink)"} `}/> Experiências
         </button>
 
         <button className={`${resolvedTheme === 'light' ? 'hover:bg-hoverLight' : resolvedTheme === 'littleDark' ? 'hover:bg-hoverDark-2' : 'hover:bg-hoverDark'} p-3 flex gap-4 items-center hover:rounded-full  active:font-bold focus:font-bold`} onClick={() => setOpenModal(true)} >
