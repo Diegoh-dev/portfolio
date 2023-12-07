@@ -8,6 +8,14 @@ import capaVolvo from '../../../public/assets/ProductList-Desktop.png'
 import capaCapsulaDoTempo from '../../../public/assets/Memories.png'
 import javascript from '../../../public/assets/javascript.png'
 import next from '../../../public/assets/next.png'
+import jest from '../../../public/assets/jest.png'
+import react from '../../../public/assets/react.png'
+import typescript from '../../../public/assets/typescript.png'
+import sass from '../../../public/assets/sass.png'
+import tailwind from '../../../public/assets/tailwind.png'
+import radix from '../../../public/assets/radix.png'
+import instagram from '../../../public/assets/instagram.png'
+
 
 export default function Habilidades(){
     return (
@@ -46,6 +54,168 @@ export default function Habilidades(){
               <Post.SectionHeader />
               <Post.Content />
               <Post.PostImage src={next} href={"" || ''}/>
+              <Post.FooterRoot>
+                <Post.PostIcon Icon={MessageCircle} onClick={()=> {
+                  toast.warn('Em breve, você poderá comentar nesse post')
+                }}>
+                  <Post.Amount amount={150} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={Heart} onClick={()=> {
+                  toast.warn('Em breve, você poderá curtir esse post')
+                }}>
+                  <Post.Amount amount={500} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={BarChart2} onClick={()=> {
+                  toast.warn('Em breve, total de visualizações')
+                }}>
+                  <Post.Amount amount={1000} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={Share2}></Post.PostIcon>
+              </Post.FooterRoot>
+            </Post.PostSection>
+          </Post.Root>
+
+          <Post.Root>
+            <Post.Header />
+            <Post.PostSection>
+              <Post.SectionHeader />
+              <Post.Content />
+              <Post.PostImage src={jest} href={"" || ''}/>
+              <Post.FooterRoot>
+                <Post.PostIcon Icon={MessageCircle} onClick={()=> {
+                  toast.warn('Em breve, você poderá comentar nesse post')
+                }}>
+                  <Post.Amount amount={150} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={Heart} onClick={()=> {
+                  toast.warn('Em breve, você poderá curtir esse post')
+                }}>
+                  <Post.Amount amount={500} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={BarChart2} onClick={()=> {
+                  toast.warn('Em breve, total de visualizações')
+                }}>
+                  <Post.Amount amount={1000} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={Share2}></Post.PostIcon>
+              </Post.FooterRoot>
+            </Post.PostSection>
+          </Post.Root>
+
+          <Post.Root>
+            <Post.Header />
+            <Post.PostSection>
+              <Post.SectionHeader />
+              <Post.Content />
+              <Post.PostImage src={react} href={"" || ''}/>
+              <Post.FooterRoot>
+                <Post.PostIcon Icon={MessageCircle} onClick={()=> {
+                  toast.warn('Em breve, você poderá comentar nesse post')
+                }}>
+                  <Post.Amount amount={150} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={Heart} onClick={()=> {
+                  toast.warn('Em breve, você poderá curtir esse post')
+                }}>
+                  <Post.Amount amount={500} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={BarChart2} onClick={()=> {
+                  toast.warn('Em breve, total de visualizações')
+                }}>
+                  <Post.Amount amount={1000} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={Share2}></Post.PostIcon>
+              </Post.FooterRoot>
+            </Post.PostSection>
+          </Post.Root>
+
+          <Post.Root>
+            <Post.Header />
+            <Post.PostSection>
+              <Post.SectionHeader />
+              <Post.Content />
+              <Post.PostImage src={typescript} href={"" || ''}/>
+              <Post.FooterRoot>
+                <Post.PostIcon Icon={MessageCircle} onClick={()=> {
+                  toast.warn('Em breve, você poderá comentar nesse post')
+                }}>
+                  <Post.Amount amount={150} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={Heart} onClick={()=> {
+                  toast.warn('Em breve, você poderá curtir esse post')
+                }}>
+                  <Post.Amount amount={500} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={BarChart2} onClick={()=> {
+                  toast.warn('Em breve, total de visualizações')
+                }}>
+                  <Post.Amount amount={1000} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={Share2}></Post.PostIcon>
+              </Post.FooterRoot>
+            </Post.PostSection>
+          </Post.Root>
+
+          <Post.Root>
+            <Post.Header />
+            <Post.PostSection>
+              <Post.SectionHeader />
+              <Post.Content />
+              <Post.PostImage src={sass} href={"" || ''}/>
+              <Post.FooterRoot>
+                <Post.PostIcon Icon={MessageCircle} onClick={()=> {
+                  toast.warn('Em breve, você poderá comentar nesse post')
+                }}>
+                  <Post.Amount amount={150} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={Heart} onClick={()=> {
+                  toast.warn('Em breve, você poderá curtir esse post')
+                }}>
+                  <Post.Amount amount={500} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={BarChart2} onClick={()=> {
+                  toast.warn('Em breve, total de visualizações')
+                }}>
+                  <Post.Amount amount={1000} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={Share2}></Post.PostIcon>
+              </Post.FooterRoot>
+            </Post.PostSection>
+          </Post.Root>
+
+          <Post.Root>
+            <Post.Header />
+            <Post.PostSection>
+              <Post.SectionHeader />
+              <Post.Content />
+              <Post.PostImage src={tailwind} href={"" || ''}/>
+              <Post.FooterRoot>
+                <Post.PostIcon Icon={MessageCircle} onClick={()=> {
+                  toast.warn('Em breve, você poderá comentar nesse post')
+                }}>
+                  <Post.Amount amount={150} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={Heart} onClick={()=> {
+                  toast.warn('Em breve, você poderá curtir esse post')
+                }}>
+                  <Post.Amount amount={500} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={BarChart2} onClick={()=> {
+                  toast.warn('Em breve, total de visualizações')
+                }}>
+                  <Post.Amount amount={1000} />
+                </Post.PostIcon>
+                <Post.PostIcon Icon={Share2}></Post.PostIcon>
+              </Post.FooterRoot>
+            </Post.PostSection>
+          </Post.Root>
+
+          <Post.Root>
+            <Post.Header />
+            <Post.PostSection>
+              <Post.SectionHeader />
+              <Post.Content />
+              <Post.PostImage src={radix} href={"" || ''}/>
               <Post.FooterRoot>
                 <Post.PostIcon Icon={MessageCircle} onClick={()=> {
                   toast.warn('Em breve, você poderá comentar nesse post')
