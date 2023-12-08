@@ -25,7 +25,7 @@ export default function Habilidades(){
             <Post.Header />
             <Post.PostSection>
               <Post.SectionHeader />
-              <Post.Content />
+              <Post.Content texto="JavaScript® (às vezes abreviado para JS) é uma linguagem leve, interpretada e baseada em objetos com funções de primeira classe, mais conhecida como a linguagem de script para páginas Web. O JavaScript é uma linguagem baseada em protótipos, multi-paradigma e dinâmica, suportando estilos de orientação a objetos."/>
               <Post.PostImage src={javascript} href={"https://github.com/Diegoh-dev/volvo-teste" || ''}/>
               <Post.FooterRoot>
                 <Post.PostIcon Icon={MessageCircle} onClick={()=> {
@@ -52,7 +52,7 @@ export default function Habilidades(){
             <Post.Header />
             <Post.PostSection>
               <Post.SectionHeader />
-              <Post.Content />
+              <Post.Content texto="Next.js é um framework para React que oferece uma estrutura básica para projetos React. O Next JS possui renderização estática e pelo lado do servidor. Possui suporte ao Typescript e serviço de tratamento de rotas."/>
               <Post.PostImage src={next} href={"" || ''}/>
               <Post.FooterRoot>
                 <Post.PostIcon Icon={MessageCircle} onClick={()=> {
@@ -79,7 +79,7 @@ export default function Habilidades(){
             <Post.Header />
             <Post.PostSection>
               <Post.SectionHeader />
-              <Post.Content />
+              <Post.Content texto="Jest é um poderoso Framework de Testes em JavaScript com um foco na simplicidade. Funciona com projetos usando: Babel, TypeScript, Node, React, Angular, Vue e muito mais!"/>
               <Post.PostImage src={jest} href={"" || ''}/>
               <Post.FooterRoot>
                 <Post.PostIcon Icon={MessageCircle} onClick={()=> {
@@ -106,7 +106,7 @@ export default function Habilidades(){
             <Post.Header />
             <Post.PostSection>
               <Post.SectionHeader />
-              <Post.Content />
+              <Post.Content texto="React é um framework JavaScript criado pelo Facebook (atual Meta) que é usado para criar interfaces de usuário (UI) em aplicativos web. Ele é popular por ser fácil de usar, altamente flexível e escalável, e é usado por muitas empresas de tecnologia, incluindo o Facebook, Instagram e Airbnb."/>
               <Post.PostImage src={react} href={"" || ''}/>
               <Post.FooterRoot>
                 <Post.PostIcon Icon={MessageCircle} onClick={()=> {
@@ -133,7 +133,7 @@ export default function Habilidades(){
             <Post.Header />
             <Post.PostSection>
               <Post.SectionHeader />
-              <Post.Content />
+              <Post.Content texto="TypeScript é uma linguagem de programação de código aberto desenvolvida pela Microsoft que é uma extensão do JavaScript. Ela adiciona recursos avançados ao JavaScript, como a tipagem estática e interfaces, tornando mais fácil detectar e prevenir erros durante a fase de desenvolvimento."/>
               <Post.PostImage src={typescript} href={"" || ''}/>
               <Post.FooterRoot>
                 <Post.PostIcon Icon={MessageCircle} onClick={()=> {
@@ -160,7 +160,7 @@ export default function Habilidades(){
             <Post.Header />
             <Post.PostSection>
               <Post.SectionHeader />
-              <Post.Content />
+              <Post.Content texto="SASS é um pré processador que no final gera seu CSS nativo. A vantagem disso é que o SASS vai te dar várias funções e recursos que o CSS nativo não tem (ainda)."/>
               <Post.PostImage src={sass} href={"" || ''}/>
               <Post.FooterRoot>
                 <Post.PostIcon Icon={MessageCircle} onClick={()=> {
@@ -187,7 +187,7 @@ export default function Habilidades(){
             <Post.Header />
             <Post.PostSection>
               <Post.SectionHeader />
-              <Post.Content />
+              <Post.Content texto="Tailwind é um framework CSS que permite há você criar layouts para suas aplicações web utilizando sua estrutura. Ou seja, uma ferramenta que fornece componentes para sua estilização. O propósito geral da criação desse framework é aumentar a velocidade para o desenvolvimento, agilizando os processos de criação de seus web sites e sistemas web."/>
               <Post.PostImage src={tailwind} href={"" || ''}/>
               <Post.FooterRoot>
                 <Post.PostIcon Icon={MessageCircle} onClick={()=> {
@@ -214,7 +214,7 @@ export default function Habilidades(){
             <Post.Header />
             <Post.PostSection>
               <Post.SectionHeader />
-              <Post.Content />
+              <Post.Content texto="Radix UI é uma biblioteca de componentes de UI de código aberto para a construção de aplicativos da web e sistemas de design acessíveis e de alta qualidade. Ele é composto por um conjunto de componentes sem estilo e de baixo nível que podem ser usados ​​para criar qualquer tipo de interface de usuário."/>
               <Post.PostImage src={radix} href={"" || ''}/>
               <Post.FooterRoot>
                 <Post.PostIcon Icon={MessageCircle} onClick={()=> {
