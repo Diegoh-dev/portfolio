@@ -7,7 +7,8 @@ import { useContext, useEffect, useState } from "react";
 import { MenuMobile } from "@/components/molecule/components/MenuMobile";
 import { ControllerContext } from "@/context/ControlleContext";
 import { MenuDesktop } from "@/components/molecule/components/MenuDesktop";
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function Dashboard() {
   const { theme, setTheme } = useTheme();
 
@@ -24,20 +25,23 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="tablet:flex tablet:w-2/3 laptop:w-3/4 h-screen	">
-      <div className="tablet:hidden">{openMenuMobile && <MenuMobile />}</div>
+    <>
+      
+      <div className="tablet:flex tablet:w-full	 laptop:w-3/4 sm:h-[calc(100dvh-57px)] h-screen	">
+        {/* <div className="tablet:hidden">{openMenuMobile && <MenuMobile />}</div> */}
 
-      {/* <div className="hidden tablet:w-1/3	laptop:w-1/4 sm:block">
+        {/* <div className="hidden tablet:w-1/3	laptop:w-1/4 sm:block">
         <MenuDesktop />
       </div> */}
-                                                                          {/* tablet:w-2/3	laptop:w-3/4 */}
-      <main className="p-3 w-full h-full overscroll-auto	overflow-auto ">
-        <HeaderPrincipal />
+        {/* tablet:w-2/3	laptop:w-3/4 */}
+        <main className="p-3 w-full h-full overscroll-auto	overflow-auto ">
+          <HeaderPrincipal />
 
-        <section className="mt-4">
-          <MenuTabs />
-        </section>
-      </main>
-    </div>
+          <section className="mt-4">
+            <MenuTabs />
+          </section>
+        </main>
+      </div>
+    </>
   );
 }
