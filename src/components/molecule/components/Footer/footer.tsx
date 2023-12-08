@@ -11,10 +11,10 @@ export function FooterComponent() {
   const { color } = useContext(ControllerContext);
 
   return (
-    <footer className="flex items-center flex-col h-32 p-[.3rem]">
+    <footer className="flex items-center flex-col h-32 p-[.3rem] sm:px-8 sm:mt-4 sm:mb-4 tablet:mt-12">
       <div className="pb-4 w-full flex items-center flex-col ">
         <h3 className="text-xl">VAMOS CONSTRUIR ALGO JUNTOS?</h3>
-        <p>
+        <p className="sm:mt-2 ">
           Se você tem algum projeto ou proposta em mente, sinta-se à vontade para enviar-me
           uma mensagem.
         </p>
@@ -22,7 +22,7 @@ export function FooterComponent() {
 
       <article
         className={`
-           rounded-[22px] flex items-center justify-center gap-4 w-3/4`}
+           rounded-[22px] flex items-center justify-center gap-4 w-3/4 sm:mb-4`}
       >
         <Tooltip label="Linkedin" placement="bottom">
           <Link

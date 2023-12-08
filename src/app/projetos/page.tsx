@@ -133,6 +133,7 @@ export default function Projetos(){
               </Post.FooterRoot>
             </Post.PostSection>
           </Post.Root>
+
           <Post.Root>
             <Post.Header />
             <Post.PostSection>
@@ -159,6 +160,7 @@ export default function Projetos(){
               </Post.FooterRoot>
             </Post.PostSection>
           </Post.Root>
+          
           <Post.Root>
             <Post.Header />
             <Post.PostSection>
